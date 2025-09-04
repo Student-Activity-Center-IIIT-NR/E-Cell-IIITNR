@@ -1,51 +1,82 @@
 import { ECellHeader } from "./Header";
 import { ECellLogo } from "./Header";
 
-/** Footer: matches the simple, blocky style with square placeholders */
+/** Footer: matches the reference design with centered multi-column layout */
 export const ECellFooter: React.FC = () => {
     return (
-        <footer className="w-full bg-black border-t border-neutral-900 text-white/90 mt-24">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10 grid gap-10 md:grid-cols-3">
-                <div className="flex items-center gap-3">
-                    <ECellLogo className="h-10 w-10" />
-                    <span className="text-sm tracking-[0.2em] text-neutral-400 uppercase">
-                        E‑Cell IIIT Naya Raipur
-                    </span>
-                </div>
+        <footer className="w-full bg-black text-white/90 mt-24" style={{ alignSelf: 'stretch' }}>
+            {/* Main footer content */}
+            <div className="w-full flex justify-center py-16">
+                <div className="w-full max-w-5xl px-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        {/* Logo and description */}
+                        <div className="text-center lg:text-left">
+                            <div className="flex items-center justify-center lg:justify-start gap-3 mb-6">
+                                <ECellLogo className="h-8 w-8" />
+                                <span className="text-lg font-semibold tracking-wide">
+                                    E-Cell
+                                </span>
+                            </div>
+                            <div className="h-9"></div>
+                            {/* Follow us section */}
+                            <div className="mt-8">
+                                <h4 className="text-white font-medium mb-4">Follow us</h4>
+                                <div className="flex gap-3 justify-center lg:justify-start">
+                                    <div className="w-10 h-10 bg-neutral-800 rounded-full flex items-center justify-center hover:bg-neutral-700 transition-colors cursor-pointer">
+                                        <ECellLogo className="h-5 w-5" />
+                                    </div>
+                                    <div className="w-10 h-10 bg-neutral-800 rounded-full flex items-center justify-center hover:bg-neutral-700 transition-colors cursor-pointer">
+                                        <ECellLogo className="h-5 w-5" />
+                                    </div>
+                                    <div className="w-10 h-10 bg-neutral-800 rounded-full flex items-center justify-center hover:bg-neutral-700 transition-colors cursor-pointer">
+                                        <ECellLogo className="h-5 w-5" />
+                                    </div>
+                                    <div className="w-10 h-10 bg-neutral-800 rounded-full flex items-center justify-center hover:bg-neutral-700 transition-colors cursor-pointer">
+                                        <ECellLogo className="h-5 w-5" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-                <div>
-                    <h3 className="font-semibold tracking-wide">EVENTS</h3>
-                    <ul className="mt-3 space-y-2 text-sm text-neutral-300">
-                        <li>E‑Summit</li>
-                        <li>Hackathon</li>
-                        <li>Workshop</li>
-                        <li>Pitchathon</li>
-                    </ul>
-                </div>
+                        {/* Product column */}
+                        <div className="text-center lg:text-left">
+                            <h3 className="text-white font-medium mb-4">Product</h3>
+                            <ul className="space-y-3 text-sm text-neutral-400">
+                                <li className="hover:text-white transition-colors cursor-pointer">E-Summit</li>
+                                <li className="hover:text-white transition-colors cursor-pointer">Startup Incubation</li>
+                                <li className="hover:text-white transition-colors cursor-pointer">Workshops</li>
+                                <li className="hover:text-white transition-colors cursor-pointer">Mentorship</li>
+                                <li className="hover:text-white transition-colors cursor-pointer">Networking</li>
+                            </ul>
+                        </div>
 
-                <div className="grid grid-cols-2 gap-6">
-                    <div>
-                        <h3 className="font-semibold tracking-wide">ABOUT US</h3>
-                        <ul className="mt-3 space-y-2 text-sm text-neutral-300">
-                            <li>Teams</li>
-                            <li>Committee</li>
-                            <li>College</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 className="font-semibold tracking-wide">SOCIAL</h3>
-                        <div className="mt-3 flex gap-2">
-                            <ECellLogo className="h-5 w-5" />
-                            <ECellLogo className="h-5 w-5" />
-                            <ECellLogo className="h-5 w-5" />
+                        {/* Use Cases column */}
+                        <div className="text-center lg:text-left">
+                            <h3 className="text-white font-medium mb-4">Use Cases</h3>
+                            <ul className="space-y-3 text-sm text-neutral-400">
+                                <li className="hover:text-white transition-colors cursor-pointer">Entrepreneurs</li>
+                                <li className="hover:text-white transition-colors cursor-pointer">Students</li>
+                                <li className="hover:text-white transition-colors cursor-pointer">Startups</li>
+                                <li className="hover:text-white transition-colors cursor-pointer">Innovators</li>
+                            </ul>
+                        </div>
+
+                        {/* Company column */}
+                        <div className="text-center lg:text-left">
+                            <h3 className="text-white font-medium mb-4">Company</h3>
+                            <ul className="space-y-3 text-sm text-neutral-400">
+                                <li className="hover:text-white transition-colors cursor-pointer">About Us</li>
+                                <li className="hover:text-white transition-colors cursor-pointer">Team</li>
+                                <li className="hover:text-white transition-colors cursor-pointer">Events</li>
+                                <li className="hover:text-white transition-colors cursor-pointer">Gallery</li>
+                                <li className="hover:text-white transition-colors cursor-pointer">
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div className="text-center text-xs text-neutral-500 pb-8">
-                © {new Date().getFullYear()} E‑Cell IIIT Naya Raipur
-            </div>
+            <div className="h-16"></div>
         </footer>
     );
 };

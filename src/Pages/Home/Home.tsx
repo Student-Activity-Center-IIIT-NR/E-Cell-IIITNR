@@ -136,10 +136,7 @@ export default function Home() {
                   <h2 className="text-6xl md:text-7xl font-extrabold tracking-[0.3em] mb-6">
                     OUR TEAM
                   </h2>
-                  <p className="text-lg text-neutral-300 max-w-3xl mx-auto">
-                    Meet the passionate individuals driving innovation and
-                    entrepreneurship at IIIT Naya Raipur
-                  </p>
+
                 </div>
                 <TeamsHome />
                 {/* Call to Action */}
