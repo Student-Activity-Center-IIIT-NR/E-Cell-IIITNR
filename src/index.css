@@ -2,6 +2,7 @@
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
+
 @font-face {
   font-family: Mont;
   src: url('./assets/Fonts/Montserrat-VariableFont_wght.ttf');
@@ -13,6 +14,10 @@
 @font-face {
   font-family: esummit;
   src: url('./assets/E-Summit/Fonts/HARRYP__.TTF');
+}
+@font-face {
+  font-family: karantina;
+  src: url('./assets/Fonts/Karantina-Regular.ttf');
 }
 *{
   margin:0;
@@ -29,7 +34,6 @@ body{
   background-image: url('./assets/Images/BG/E-Cell_BG.png');
   background-size: cover;
 }
-
 a{
   text-decoration: none;
   color: inherit;
@@ -116,6 +120,8 @@ body::-webkit-scrollbar-thumb {
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --font-karantina: karantina;
+  --font-family-karantina: karantina, serif;
 }
 
 :root {
@@ -193,5 +199,28 @@ body::-webkit-scrollbar-thumb {
   }
   body {
     @apply bg-background text-foreground;
+  }
+  .font-karantina {
+    font-family: karantina, serif !important;
+  }
+  /* Force centering for main content */
+  .main {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+  /* Ensure sections are centered */
+  section {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+}
+
+@layer utilities {
+  .font-karantina {
+    font-family: karantina, serif !important;
   }
 }
