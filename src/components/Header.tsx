@@ -59,27 +59,20 @@ export const ECellHeader: React.FC = () => {
     };
 
     return (
-        <header className="w-full bg-black sticky top-0 z-50">
-            <nav className="w-full px-6 sm:px-12 lg:px-24">
+        <header className="w-full bg-black sticky top-0 z-50 flex justify-center">
+            <nav className="w-[65%] max-w-7xl px-6 sm:px-12 lg:px-24">
                 {/* Desktop / Tablet */}
                 <div className="hidden md:grid grid-cols-7 items-center h-24 justify-items-center w-full">
                     <NavLink to="/">Home</NavLink>
-                    <NavLink to="/teams">Team</NavLink>
+                    <NavLink to="/team">Team</NavLink>
                     <NavLink to="/#about">About Us</NavLink>
 
                     <div className="flex items-center justify-center">
                         <ECellLogo className="h-20 w-20" />
                     </div>
-
-                    <div className="flex items-center justify-center">
-                        <NavLink to="/events">Events</NavLink>
-                    </div>
-                    <div className="flex items-center justify-center">
-                        <NavLink to="/#e-summit">E‑Summit</NavLink>
-                    </div>
-                    <div className="flex items-center justify-center">
-                        <NavLink to="/#contact">Contact Us</NavLink>
-                    </div>
+                    <NavLink to="/events">Events</NavLink>
+                    <NavLink to="/esummit">E‑Summit</NavLink>
+                    <NavLink to="/#contact">Contact Us</NavLink>
                 </div>
 
                 {/* Mobile Header */}
