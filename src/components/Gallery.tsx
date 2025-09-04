@@ -1,47 +1,63 @@
-import { cn } from "@/lib/utils";
 import React from "react";
-import { BentoGrid, BentoGridItem } from "./ui/bento-grid";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
-export function BentoGridDemo() {
+const Carousel = () => {
+    const settings = {
+        dots: false, // Disable dots
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        lazyLoad: "ondemand" as const,
+        arrows: false, // Disable arrows
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: false,
+                },
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            },
+        ],
+    };
+
     return (
-        <BentoGrid className="max-w-6xl mx-auto">
-            {galleryImages.map((image, i) => (
-                <BentoGridItem
-                    key={i}
-                    header={
-                        <div className="w-full h-full rounded-lg overflow-hidden">
-                            <img
-                                src={image.src}
-                                alt={image.alt}
-                                className="w-full h-full object-cover"
-                            />
-                        </div>
-                    }
-                    className={i === 3 || i === 6 ? "md:col-span-2" : ""}
-                />
-            ))}
-        </BentoGrid>
+        <div className="carousel-container">
+            <Slider {...settings}>
+                <div>
+                    <img src="/home/gallery/1.png" alt="Image 1" style={{ width: "100%", height: "auto" }} />
+                </div>
+                <div>
+                    <img src="/home/gallery/2.png" alt="Image 2" style={{ width: "100%", height: "auto" }} />
+                </div>
+                <div>
+                    <img src="/home/gallery/3.png" alt="Image 3" style={{ width: "100%", height: "auto" }} />
+                </div>
+                <div>
+                    <img src="/home/gallery/4.png" alt="Image 4" style={{ width: "100%", height: "auto" }} />
+                </div>
+                <div>
+                    <img src="/home/gallery/5.png" alt="Image 5" style={{ width: "100%", height: "auto" }} />
+                </div>
+                <div>
+                    <img src="/home/gallery/6.png" alt="Image 6" style={{ width: "100%", height: "auto" }} />
+                </div>
+            </Slider>
+        </div>
     );
-}
+};
 
-const galleryImages = [
-    { src: "/home/gallery/1.png", alt: "Gallery Image 1" },
-    { src: "/home/gallery/2.png", alt: "Gallery Image 2" },
-    { src: "/home/gallery/3.png", alt: "Gallery Image 3" },
-    { src: "/home/gallery/4.png", alt: "Gallery Image 4" },
-    { src: "/home/gallery/5.png", alt: "Gallery Image 5" },
-    { src: "/home/gallery/6.png", alt: "Gallery Image 6" },
-    { src: "/home/gallery/7.png", alt: "Gallery Image 7" },
-    { src: "/home/gallery/8.png", alt: "Gallery Image 8" },
-    { src: "/home/gallery/9.png", alt: "Gallery Image 9" },
-    { src: "/home/gallery/10.png", alt: "Gallery Image 10" },
-    { src: "/home/gallery/11.png", alt: "Gallery Image 11" },
-    { src: "/home/gallery/12.png", alt: "Gallery Image 12" },
-    { src: "/home/gallery/13.png", alt: "Gallery Image 13" },
-    { src: "/home/gallery/14.png", alt: "Gallery Image 14" },
-    { src: "/home/gallery/15.png", alt: "Gallery Image 15" },
-    { src: "/home/gallery/16.png", alt: "Gallery Image 16" },
-    { src: "/home/gallery/17.png", alt: "Gallery Image 17" },
-    { src: "/home/gallery/18.png", alt: "Gallery Image 18" },
-    { src: "/home/gallery/19.png", alt: "Gallery Image 19" },
-];
+export default Carousel;

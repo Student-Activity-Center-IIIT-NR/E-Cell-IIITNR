@@ -6,6 +6,8 @@ import { ECellHeader } from "../../components/Header";
 import { ECellFooter } from "../../components/Footer";
 import TeamsHome from "../../components/TeamsHome";
 import { Events } from "../../components/Events";
+import Gallery from "../../components/Gallery";
+
 export default function Home() {
   return (
     <div className="w-full">
@@ -65,8 +67,10 @@ export default function Home() {
                     DARE TO DREAM,
                   </h2>
                   <h3 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-wider text-neutral-300">
-                    VENTURE TO SUCCEED
+                    VENTURE TO SUCCEED .
                   </h3>
+                  <div className="h-16 bg-black"></div>
+
                   <p className="text-xl sm:text-xl md:text-xl text-neutral-300 leading-6">
                     Welcome to the Entrepreneur Cell of IIIT Naya Raipur, where
                     dreams take flight and ventures succeed. Join us in shaping
@@ -156,6 +160,10 @@ export default function Home() {
                 <h2 className="text-5xl md:text-6xl font-extrabold tracking-[0.3em] text-center">
                   GALLERY
                 </h2>
+                <div className="h-16"></div>
+                <Gallery />
+                <div className="h-26"></div>
+
               </div>
             </div>
           </section>
