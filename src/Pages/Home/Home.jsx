@@ -1,48 +1,133 @@
-import React from 'react'
-import './Home.css'
-import About from '../../Components/Home/About/About'
-import Main from '../../Components/Home/Main/Main'
-import OurEvents from '../../Components/Our Events/OurEvents'
-import Gallery from '../../Components/Home/Gallery/Gallery'
-import Navbar from '../../Components/Navbar/Navbar'
-import Load from '../../Components/Load_Page/Load'
-import ScrollToTop from "react-scroll-to-top";
+"use client";
 
-const Home = () => {
-  const d="M24.37 0.1521V3.49566C24.4796 3.49566 24.6714 3.52306 24.8085 3.6875L44.5957 25.3384C44.6505 25.4206 44.8698 25.6399 44.7054 25.9961C44.5409 26.3524 44.2669 26.3524 44.1572 26.3524C41.0055 26.3524 38.2375 28.3531 37.2235 31.3404L24.9181 67.8454C24.8907 67.955 24.781 68.2565 24.3426 68.2565C23.9041 68.2565 23.8218 67.9824 23.767 67.8454L11.4616 31.3404C10.4476 28.3531 7.67958 26.3524 4.52787 26.3524C1.37616 26.3524 4.14418 26.3524 3.97975 25.9961C3.81531 25.6399 4.00715 25.4206 4.08937 25.3384L23.8766 3.6875C24.0137 3.52306 24.2055 3.49566 24.3151 3.49566V0.1521M24.3151 0.1521C23.2463 0.1521 22.1775 0.590602 21.3827 1.44019L1.59541 23.0911C-0.734119 25.6399 1.07469 29.7234 4.52787 29.7234C7.98105 29.7234 7.7344 30.8196 8.28252 32.4092L20.5879 68.9142C21.1908 70.6956 22.753 71.6001 24.3426 71.6001C25.9321 71.6001 27.4943 70.6956 28.0972 68.9142L40.4026 32.4092C40.9507 30.7922 42.458 29.7234 44.1572 29.7234C47.583 29.7234 49.3918 25.6399 47.0897 23.0911L27.3024 1.44019C26.5076 0.590602 25.4388 0.1521 24.37 0.1521H24.3151Z"
-  const scrollStyle={
-    border:"2px solid #0803FF",
-    height:"55px",
-    width:"40px"
-   }
+import React from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+// import { Karantina } from "next/font/google";
+import { ECellHeader } from "../../components/Header";
+import { ECellFooter } from "../../components/Footer";
+import TeamsHome from "../../components/TeamsHome";
+import { Events } from "../../components/Events";
+import { Gallery } from "../../components/Gallery";
 
-  let [load,setLoad] = React.useState(true);
-  React.useEffect(()=>{
-      const timer2 = setTimeout(()=>{
-          setLoad(false);
-      },3000)
-      return () => clearTimeout(timer2);
-  },[load]);
+// const karantina = Karantina({
+//   variable: "--font-karantina",
+//   subsets: ["latin"],
+//   weight: ["300", "400", "700"],
+// });
 
-  React.useState(()=>{
-      document.body.style.overflow = 'hidden';
-      const timer = setTimeout(()=>{
-          document.body.style.overflow = 'visible';
-      },3000)
-      return () => clearTimeout(timer);
-  },[])
-
+export default function Home() {
   return (
-    <div className="home">
-      {load && <Load />}
-      {!load && <Navbar />}
-      <Main load={load}/>
-      {!load && <About />}
-      {!load && <Gallery />}
-      {!load && <OurEvents />}
-      {!load && <ScrollToTop className="scroll-top" smooth={true} color="#0803FF" viewBox="0 0 49 72" svgPath={d} style={scrollStyle}/>}
+    <div>
+      <main className="min-h-screen bg-black text-white selection:bg-neutral-800 selection:text-white">
+        <ECellHeader />
+
+        {/* Hero Section */}
+        <section className="relative">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24 lg:py-28">
+            <div className="grid lg:grid-cols-12 gap-8 items-end">
+              <div className="flex flex-col sm:flex-row items-end lg:col-span-12">
+                <div className="flex flex-col sm:flex-row items-end">
+                  <h1 className="font-karantina text-white text-[20vw] sm:text-[15rem] lg:text-[25rem] leading-none text-center sm:text-left">
+                    E-CELL
+                  </h1>
+                  <span className="font-karantina mt-4 sm:mt-0 sm:ml-16 text-[12vw] sm:text-9xl lg:text-[10rem] tracking-widest mb-2 sm:mb-4 lg:mb-6 text-center sm:text-left">
+                    IIITNR
+                  </span>
+                </div>
+              </div>
+              <div className="lg:col-span-5" />
+            </div>
+            {/* Scroll Indicator */}
+            <div className="flex justify-center  mb-3">
+              <div className="text-center">
+                <LazyLoadImage
+                  src="/mouse.png"
+                  alt="Scroll indicator"
+                  width={108}
+                  height={155}
+                  className="mx-auto"
+                  priority
+                />
+                <p className="text-white text-sm mb-10">Scroll Down</p>
+              </div>
+            </div>
+            <div className="mt-8 grid md:grid-cols-2 gap-8 relative">
+              <div className="space-y-3">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-wider text-neutral-300">
+                  DARE TO DREAM,
+                </h2>
+                <h3 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-wider text-neutral-300">
+                  VENTURE TO SUCCEED
+                </h3>
+                <p className="text-xl sm:text-xl md:text-xl text-neutral-300 leading-6">
+                  Welcome to the Entrepreneur Cell of IIIT Naya Raipur, where
+                  dreams take flight and ventures succeed. Join us in shaping
+                  tomorrow's innovations!
+                </p>
+              </div>
+              {/* Vertical white line separator for md and up */}
+              <div
+                className="hidden md:block absolute left-1/2 top-0 h-full w-px bg-white/80 -translate-x-1/2"
+                aria-hidden="true"
+              ></div>
+              <div className="text-xl sm:text-xl md:text-xl text-neutral-300 leading-6">
+                <p className="mb-3">
+                  E‑Cell IIIT Naya Raipur is a non‑profit student‑run
+                  organization where we explore the evolving world of
+                  entrepreneurship and startups. We host webinars, lectures,
+                  podcasts and book summaries, ideation games and competitions.
+                </p>
+                <p>
+                  Our mission is to help answer essential questions like: "How
+                  does entrepreneurship affect day‑to‑day life?" and "How can I
+                  transform a startup idea into a functional business model?"
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* EVENTS */}
+        <section id="events" className="py-16 border-t border-neutral-900">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6">
+            <div className="text-center">
+              <h2 className="text-5xl md:text-6xl font-extrabold tracking-[0.3em]">
+                EVENTS
+              </h2>
+            </div>
+            <Events />
+          </div>
+        </section>
+
+        {/* TEAMS */}
+        <section id="teams" className="py-16 border-t border-neutral-900">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-6xl md:text-7xl font-extrabold tracking-[0.3em] mb-6">
+                OUR TEAM
+              </h2>
+              <p className="text-lg text-neutral-300 max-w-3xl mx-auto">
+                Meet the passionate individuals driving innovation and
+                entrepreneurship at IIIT Naya Raipur
+              </p>
+            </div>
+            <TeamsHome />
+            {/* Call to Action */}
+          </div>
+        </section>
+
+        {/* GALLERY */}
+        <section id="gallery" className="py-16 border-t border-neutral-900">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6">
+            <h2 className="text-5xl md:text-6xl font-extrabold tracking-[0.3em] text-center">
+              GALLERY
+            </h2>
+            <Gallery />
+          </div>
+        </section>
+
+        <ECellFooter />
+      </main>
     </div>
   );
 }
-
-export default Home;
