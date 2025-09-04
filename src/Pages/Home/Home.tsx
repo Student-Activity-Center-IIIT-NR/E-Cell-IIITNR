@@ -13,12 +13,11 @@ export default function Home() {
     <div className="w-full">
       <main className="min-h-screen bg-black text-white selection:bg-neutral-800 selection:text-white w-full">
         <ECellHeader />
-
         {/* Hero Section */}
         <section className="relative w-full flex flex-col items-center">
           <div className="w-full px-8 sm:px-12 lg:px-16 py-16 sm:py-24 lg:py-28 flex flex-col items-center">
             <div className="flex flex-col items-center justify-center text-center w-full max-w-7xl mx-auto">
-              <div className="flex flex-col sm:flex-row items-baseline justify-center w-full">
+              <div className="flex flex-row items-baseline justify-center w-full">
                 <h1
                   className="font-karantina text-white text-[25vw] sm:text-[20rem] lg:text-[30rem] leading-none text-center"
                   style={{ fontFamily: "karantina, serif" }}
@@ -26,7 +25,7 @@ export default function Home() {
                   E-CELL
                 </h1>
                 <span
-                  className="font-karantina mt-4 sm:mt-0 sm:ml-16 text-[12vw] sm:text-9xl lg:text-[10rem] tracking-widest mb-2 sm:mb-4 lg:mb-6 text-center"
+                  className="font-karantina ml-4 sm:ml-16 text-[12vw] sm:text-9xl lg:text-[10rem] tracking-widest text-center"
                   style={{ fontFamily: "karantina, serif" }}
                 >
                   IIITNR
@@ -34,7 +33,7 @@ export default function Home() {
               </div>
             </div>
             {/* Scroll Indicator */}
-            <div className="flex justify-center mb-3">
+            <div className="hidden sm:flex justify-center mb-3">
               <div className="text-center">
                 <LazyLoadImage
                   src="/mouse.png"
@@ -85,7 +84,7 @@ export default function Home() {
         {/* EVENTS */}
         <section
           id="events"
-          className="py-24 border-t border-neutral-900 w-full !block"
+          className="py-24 border-t border-neutral-900 w-full "
         >
           <div className="w-full px-8 sm:px-12 lg:px-16 flex flex-col items-center">
             <div className="max-w-6xl mx-auto w-full">

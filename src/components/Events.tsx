@@ -4,38 +4,38 @@ export function Events() {
     const testimonials = [
         {
             quote:
-                "The attention to detail and innovative features have completely transformed our workflow. This is exactly what we've been looking for.",
-            name: "Sarah Chen",
-            designation: "Product Manager at TechFlow",
-            src: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "E-Summit was an incredible platform that connected me with industry leaders and fellow entrepreneurs. The networking opportunities were invaluable for my startup journey.",
+            name: "E-Summit",
+            designation: "Annual Entrepreneurship Summit",
+            src: "/home/events/esummit.jpg",
         },
         {
             quote:
-                "Implementation was seamless and the results exceeded our expectations. The platform's flexibility is remarkable.",
-            name: "Michael Rodriguez",
-            designation: "CTO at InnovateSphere",
-            src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "The E-Cell Awards recognized our innovative business model and gave us the confidence to scale our operations. It's amazing to be celebrated for entrepreneurial excellence.",
+            name: "E-Cell Awards",
+            designation: "Entrepreneurial Excellence Recognition",
+            src: "/home/events/awards.jpg",
         },
         {
             quote:
-                "This solution has significantly improved our team's productivity. The intuitive interface makes complex tasks simple.",
-            name: "Emily Watson",
-            designation: "Operations Director at CloudScale",
-            src: "https://images.unsplash.com/photo-1623582854588-d60de57fa33f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "Participating in E-Cell Debates sharpened my critical thinking and helped me understand different perspectives on business challenges. Great learning experience!",
+            name: "E-Cell Debates",
+            designation: "Business Case Study Discussions",
+            src: "/home/events/case-study.jpg",
         },
         {
             quote:
-                "Outstanding support and robust features. It's rare to find a product that delivers on all its promises.",
-            name: "James Kim",
-            designation: "Engineering Lead at DataPro",
-            src: "https://images.unsplash.com/photo-1636041293178-808a6762ab39?q=80&w=3464&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "The E-Cell Hackathon pushed our team to think creatively and build innovative solutions under pressure. We learned so much about rapid prototyping and market validation.",
+            name: "E-Cell Hackathons",
+            designation: "Innovation & Problem Solving",
+            src: "/home/events/hackathon.jpg",
         },
         {
             quote:
-                "The scalability and performance have been game-changing for our organization. Highly recommend to any growing business.",
-            name: "Lisa Thompson",
-            designation: "VP of Technology at FutureNet",
-            src: "https://images.unsplash.com/photo-1624561172888-ac93c696e10c?q=80&w=2592&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                "E-Cell Quiz tested our knowledge of entrepreneurship, economics, and business strategy. It was both challenging and educational for aspiring entrepreneurs.",
+            name: "E-Cell Quiz",
+            designation: "Entrepreneurship Knowledge Challenge",
+            src: "/home/events/quiz.jpg",
         },
     ];
     return <AnimatedTestimonials testimonials={testimonials} />;

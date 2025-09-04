@@ -7,16 +7,26 @@ import { Badge } from "./ui/badge"
 import ImageCursorTrail from "./ui/image-cursortrail"
 
 const images = [
-    "https://images.pexels.com/photos/30082445/pexels-photo-30082445.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    "https://images.unsplash.com/photo-1692606743169-e1ae2f0a960f?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "https://images.unsplash.com/photo-1709949908058-a08659bfa922?q=80&w=1200&auto=format",
-    "https://images.unsplash.com/photo-1548192746-dd526f154ed9?q=80&w=1200&auto=format",
-    "https://images.unsplash.com/photo-1644141655284-2961181d5a02?q=80&w=3000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "https://images.pexels.com/photos/30082445/pexels-photo-30082445.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    "https://assets.lummi.ai/assets/QmNfwUDpehZyLWzE8to7QzgbJ164S6fQy8JyUWemHtmShj?auto=format&w=1500",
-    "https://images.unsplash.com/photo-1706049379414-437ec3a54e93?q=80&w=1200&auto=format",
-    "https://assets.lummi.ai/assets/Qmb2P6tF2qUaFXnXpnnp2sk9HdVHNYXUv6MtoiSq7jjVhQ?auto=format&w=1500",
-    "https://images.unsplash.com/photo-1508873881324-c92a3fc536ba?q=80&w=1200&auto=format",
+    "/home/gallery/1.png",
+    "/home/gallery/2.png",
+    "/home/gallery/3.png",
+    "/home/gallery/4.png",
+    "/home/gallery/5.png",
+    "/home/gallery/6.png",
+    "/home/gallery/7.png",
+    "/home/gallery/8.png",
+    "/home/gallery/9.png",
+    "/home/gallery/10.png",
+    "/home/gallery/11.png",
+    "/home/gallery/12.png",
+    "/home/gallery/13.png",
+    "/home/gallery/14.png",
+    "/home/gallery/15.png",
+    "/home/gallery/16.png",
+    "/home/gallery/17.png",
+    "/home/gallery/18.png",
+    "/home/gallery/19.png",
+    "/home/gallery/20.png",
 ]
 
 export function Gallery() {
@@ -25,14 +35,13 @@ export function Gallery() {
             <div className="relative mx-auto flex w-full flex-col rounded-[24px] bg-neutral-800/5  shadow-sm md:items-start md:gap-8 md:rounded-b-[20px] md:rounded-t-[40px] ">
                 <ImageCursorTrail
                     items={images}
-                    maxNumberOfImages={5}
-                    distance={25}
-                    imgClass="sm:w-40 w-28 sm:h-48 h-36  "
+                    maxNumberOfImages={10}
+                    distance={9}
+                    imgClass="sm:w-40 w-28 sm:h-48 h-34 sm:h-44  "
                     className=" max-w-4xl rounded-3xl "
                 >
                     <article className="relative z-50 flex flex-col items-center justify-center ">
-                        <h1 className="max-w-2xl text-center text-5xl font-semibold tracking-tight ">
-                            Hover to re-experience the moments
+                        <h1 className="max-w-2xl text-center text-5xl font-semibold tracking-tight text-white">
                         </h1>
                     </article>
                 </ImageCursorTrail>
