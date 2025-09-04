@@ -6,33 +6,33 @@ export const ECellFooter: React.FC = () => {
     return (
         <footer className="w-full bg-black text-white/90 mt-24" style={{ alignSelf: 'stretch' }}>
             {/* Main footer content */}
-            <div className="w-full flex justify-center py-16">
-                <div className="w-full max-w-5xl px-8">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="w-full flex justify-center py-24">
+                <div className="w-full max-w-screen-2xl px-16">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-32">
                         {/* Logo and description */}
                         <div className="text-center lg:text-left">
-                            <div className="flex items-center justify-center lg:justify-start gap-3 mb-6">
-                                <ECellLogo className="h-8 w-8" />
-                                <span className="text-lg font-semibold tracking-wide">
+                            <div className="flex items-center justify-center lg:justify-start gap-6 mb-12">
+                                <ECellLogo className="h-14 w-14" />
+                                <span className="text-4xl font-semibold tracking-wide">
                                     E-Cell
                                 </span>
                             </div>
-                            <div className="h-9"></div>
+                            <div className="h-16"></div>
                             {/* Follow us section */}
-                            <div className="mt-8">
-                                <h4 className="text-white font-medium mb-4">Follow us</h4>
-                                <div className="flex gap-3 justify-center lg:justify-start">
-                                    <div className="w-10 h-10 bg-neutral-800 rounded-full flex items-center justify-center hover:bg-neutral-700 transition-colors cursor-pointer">
-                                        <ECellLogo className="h-5 w-5" />
+                            <div className="mt-12">
+                                <h4 className="text-white font-medium mb-10 text-2xl">Follow us</h4>
+                                <div className="flex gap-8 justify-center lg:justify-start">
+                                    <div className="w-16 h-16 bg-neutral-800 rounded-full flex items-center justify-center hover:bg-neutral-700 transition-colors cursor-pointer">
+                                        <ECellLogo className="h-8 w-8" />
                                     </div>
-                                    <div className="w-10 h-10 bg-neutral-800 rounded-full flex items-center justify-center hover:bg-neutral-700 transition-colors cursor-pointer">
-                                        <ECellLogo className="h-5 w-5" />
+                                    <div className="w-16 h-16 bg-neutral-800 rounded-full flex items-center justify-center hover:bg-neutral-700 transition-colors cursor-pointer">
+                                        <ECellLogo className="h-8 w-8" />
                                     </div>
-                                    <div className="w-10 h-10 bg-neutral-800 rounded-full flex items-center justify-center hover:bg-neutral-700 transition-colors cursor-pointer">
-                                        <ECellLogo className="h-5 w-5" />
+                                    <div className="w-16 h-16 bg-neutral-800 rounded-full flex items-center justify-center hover:bg-neutral-700 transition-colors cursor-pointer">
+                                        <ECellLogo className="h-8 w-8" />
                                     </div>
-                                    <div className="w-10 h-10 bg-neutral-800 rounded-full flex items-center justify-center hover:bg-neutral-700 transition-colors cursor-pointer">
-                                        <ECellLogo className="h-5 w-5" />
+                                    <div className="w-16 h-16 bg-neutral-800 rounded-full flex items-center justify-center hover:bg-neutral-700 transition-colors cursor-pointer">
+                                        <ECellLogo className="h-8 w-8" />
                                     </div>
                                 </div>
                             </div>
@@ -40,8 +40,8 @@ export const ECellFooter: React.FC = () => {
 
                         {/* Product column */}
                         <div className="text-center lg:text-left">
-                            <h3 className="text-white font-medium mb-4">Product</h3>
-                            <ul className="space-y-3 text-sm text-neutral-400">
+                            <h3 className="text-white font-medium mb-10 text-3xl">Product</h3>
+                            <ul className="space-y-8 text-xl text-neutral-400">
                                 <li className="hover:text-white transition-colors cursor-pointer">E-Summit</li>
                                 <li className="hover:text-white transition-colors cursor-pointer">Startup Incubation</li>
                                 <li className="hover:text-white transition-colors cursor-pointer">Workshops</li>
@@ -52,8 +52,8 @@ export const ECellFooter: React.FC = () => {
 
                         {/* Use Cases column */}
                         <div className="text-center lg:text-left">
-                            <h3 className="text-white font-medium mb-4">Use Cases</h3>
-                            <ul className="space-y-3 text-sm text-neutral-400">
+                            <h3 className="text-white font-medium mb-10 text-3xl">Use Cases</h3>
+                            <ul className="space-y-8 text-xl text-neutral-400">
                                 <li className="hover:text-white transition-colors cursor-pointer">Entrepreneurs</li>
                                 <li className="hover:text-white transition-colors cursor-pointer">Students</li>
                                 <li className="hover:text-white transition-colors cursor-pointer">Startups</li>
@@ -63,8 +63,8 @@ export const ECellFooter: React.FC = () => {
 
                         {/* Company column */}
                         <div className="text-center lg:text-left">
-                            <h3 className="text-white font-medium mb-4">Company</h3>
-                            <ul className="space-y-3 text-sm text-neutral-400">
+                            <h3 className="text-white font-medium mb-10 text-3xl">Company</h3>
+                            <ul className="space-y-8 text-xl text-neutral-400">
                                 <li className="hover:text-white transition-colors cursor-pointer">About Us</li>
                                 <li className="hover:text-white transition-colors cursor-pointer">Team</li>
                                 <li className="hover:text-white transition-colors cursor-pointer">Events</li>
@@ -76,7 +76,7 @@ export const ECellFooter: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <div className="h-16"></div>
+            <div className="h-24"></div>
         </footer>
     );
 };

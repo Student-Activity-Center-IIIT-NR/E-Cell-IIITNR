@@ -11,7 +11,7 @@ const Carousel = () => {
         slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 1000,
         lazyLoad: "ondemand" as const,
         arrows: false, // Disable arrows
         responsive: [

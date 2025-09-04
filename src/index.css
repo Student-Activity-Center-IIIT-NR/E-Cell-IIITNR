@@ -19,20 +19,32 @@
   font-family: karantina;
   src: url('./assets/Fonts/Karantina-Regular.ttf');
 }
+@font-face {
+  font-family: Poppins;
+  src: url('./assets/Fonts/Poppins-Regular.ttf');
+}
+
 *{
   margin:0;
   padding: 0;
   box-sizing: border-box;
   font-family: Mont;
   scroll-behavior: smooth;
+}
 
+html {
+  overflow-x: hidden;
+  height: 100%;
 }
 
 body{
-  min-height: 100svh;
   background-color: #111111;
   background-image: url('./assets/Images/BG/E-Cell_BG.png');
   background-size: cover;
+  overflow-x: hidden;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 a{
   text-decoration: none;
@@ -122,6 +134,7 @@ body::-webkit-scrollbar-thumb {
   --color-sidebar-ring: var(--sidebar-ring);
   --font-karantina: karantina;
   --font-family-karantina: karantina, serif;
+  --font-family-poppins: Poppins, sans-serif;
 }
 
 :root {
@@ -197,18 +210,17 @@ body::-webkit-scrollbar-thumb {
   * {
     @apply border-border outline-ring/50;
   }
+  
+  #root {
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  
   body {
     @apply bg-background text-foreground;
   }
   .font-karantina {
     font-family: karantina, serif !important;
-  }
-  /* Force centering for main content */
-  .main {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    width: 100% !important;
   }
   /* Ensure sections are centered */
   section {
@@ -223,4 +235,7 @@ body::-webkit-scrollbar-thumb {
   .font-karantina {
     font-family: karantina, serif !important;
   }
+  .font-poppins {
+    font-family: Poppins, sans-serif !important;
+  } 
 }

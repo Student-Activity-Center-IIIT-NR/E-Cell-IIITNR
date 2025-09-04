@@ -10,17 +10,17 @@ import Gallery from "../../components/Gallery";
 
 export default function Home() {
   return (
-    <div className="w-full">
-      <main className="min-h-screen bg-black text-white selection:bg-neutral-800 selection:text-white w-full relative">
+    <div className="w-full min-h-screen font-poppins">
+      <main className="bg-black text-white selection:bg-neutral-800 selection:text-white w-full relative min-h-screen">
         {/* Background SVG Pattern */}
         <div
-          className="absolute inset-0 w-full h-full opacity-70 pointer-events-none"
+          className="absolute inset-0 w-full h-full opacity-90 pointer-events-none z-0"
           style={{
             backgroundImage: `url('/background-pattern.svg')`,
             backgroundRepeat: 'repeat',
             backgroundSize: 'auto',
             backgroundPosition: 'center',
-            filter: 'brightness(2) contrast(1.2)',
+            filter: 'brightness(3) contrast(1.5)',
           }}
         />
 
@@ -56,24 +56,26 @@ export default function Home() {
                     height={155}
                     className="mx-auto"
                   />
-                  <p className="text-white text-sm mb-10">Scroll Down</p>
+                  <p className="text-white text-sm mb-10 font-poppins">Scroll Down</p>
                   <div className="h-16 bg-black"></div>
 
                 </div>
               </div>
               <div className="mt-8 grid md:grid-cols-2 gap-8 relative max-w-6xl mx-auto">
                 <div className="space-y-3">
-                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-wider text-neutral-300">
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-wider text-neutral-300 font-poppins">
                     DARE TO DREAM,
                   </h2>
-                  <h3 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-wider text-neutral-300">
-                    VENTURE TO SUCCEED .
+                  <h3 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-wider text-neutral-300 font-poppins">
+                    VENTURE TO SUCCEED.
                   </h3>
-                  <div className="h-16 bg-black"></div>
+                  <div className="h-6 bg-black"></div>
 
-                  <p className="text-xl sm:text-xl md:text-xl text-neutral-300 leading-6">
+                  <p className="text-xl sm:text-xl md:text-xl text-neutral-300 leading-6 font-poppins">
                     Welcome to the Entrepreneur Cell of IIIT Naya Raipur, where
-                    dreams take flight and ventures succeed. Join us in shaping
+                    dreams take flight and ventures succeed.
+                    <br />
+                    Join us in shaping
                     tomorrow's innovations!
                   </p>
                 </div>
@@ -83,13 +85,14 @@ export default function Home() {
                   aria-hidden="true"
                 ></div>
                 <div className="text-xl sm:text-xl md:text-xl text-neutral-300 leading-6">
-                  <p className="mb-3">
+                  <p className="mb-3 font-poppins">
                     E‑Cell IIIT Naya Raipur is a non‑profit student‑run
                     organization where we explore the evolving world of
                     entrepreneurship and startups. We host webinars, lectures,
                     podcasts and book summaries, ideation games and competitions.
                   </p>
-                  <p>
+                  <br />
+                  <p className="font-poppins ">
                     Our mission is to help answer essential questions like: "How
                     does entrepreneurship affect day‑to‑day life?" and "How can I
                     transform a startup idea into a functional business model?"
