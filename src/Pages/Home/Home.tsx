@@ -33,7 +33,7 @@ export default function Home() {
               <div className="flex flex-col items-center justify-center text-center w-full max-w-7xl mx-auto">
                 <div className="flex flex-row items-baseline justify-center w-full">
                   <h1
-                    className="font-karantina text-white text-[25vw] sm:text-[20rem] lg:text-[30rem] leading-none text-center"
+                    className="font-karantina text-white text-[30vw] sm:text-[20rem] lg:text-[30rem] leading-none text-center"
                     style={{ fontFamily: "karantina, serif" }}
                   >
                     E-CELL
@@ -80,7 +80,7 @@ export default function Home() {
                   </p>
 
                   {/* E-Cell Logo */}
-                  <div className="flex justify-center md:justify-start mt-8">
+                  <div className="flex justify-center md:justify-start mt-16 mb-16">
                     <img
                       src="/EcellLogo3D.png"
                       alt="E-Cell Logo"
@@ -137,7 +137,7 @@ export default function Home() {
           </section>
 
           {/* Spacing between Events and Teams */}
-          <div className="h-16"></div>
+          <div className="h-32"></div>
 
           {/* TEAMS */}
           <section
