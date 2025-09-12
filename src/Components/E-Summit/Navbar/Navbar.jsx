@@ -73,18 +73,6 @@ function Navbar(props) {
             </ListItemButton>
           </NavLink>
         </ListItem>
-
-        <ListItem disablePadding>
-          <a
-            href="https://unstop.com/college-fests/e-summit-2025-international-institute-of-information-technology-iiit-naya-raipur-307942"
-            target="_main"
-          >
-            <ListItemButton sx={{ textAlign: "center", fontFamily: "Optimus" }}>
-              <ListItemText primary="Register" />
-            </ListItemButton>
-          </a>
-        </ListItem>
-
         <ListItem disablePadding>
           <NavLink to="/cryptic">
             <ListItemButton sx={{ textAlign: "center", fontFamily: "Optimus" }}>
@@ -142,12 +130,6 @@ function Navbar(props) {
             <NavLink to="/cryptic">
               <Button sx={navStyle}>Cryptic Hunt</Button>
             </NavLink>
-            <a
-              target="_main"
-              href="https://unstop.com/college-fests/e-summit-2025-international-institute-of-information-technology-iiit-naya-raipur-307942"
-            >
-              <Button sx={navStyle}>Register</Button>
-            </a>
           </Box>
         </Toolbar>
       </AppBar>
