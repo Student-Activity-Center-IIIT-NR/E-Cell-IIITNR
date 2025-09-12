@@ -146,9 +146,8 @@ export const TeamMember: React.FC<TeamMemberProps> = ({
 
           {/* Bio - Enhanced with better transitions */}
           <div
-            className={`overflow-hidden transition-all duration-500 ease-in-out ${
-              isHovered ? "max-h-20 opacity-100 mt-4" : "max-h-0 opacity-0"
-            }`}
+            className={`overflow-hidden transition-all duration-500 ease-in-out ${isHovered ? "max-h-20 opacity-100 mt-4" : "max-h-0 opacity-0"
+              }`}
           >
             <div className="pt-3 border-t border-white/15">
               <p className="text-gray-300 text-sm leading-relaxed">
@@ -160,9 +159,8 @@ export const TeamMember: React.FC<TeamMemberProps> = ({
 
         {/* Enhanced Contact Links - Fixed hover visibility */}
         <div
-          className={`flex justify-center space-x-3 transition-all duration-300 ${
-            isHovered ? "mt-6" : "mt-4"
-          }`}
+          className={`flex justify-center space-x-3 transition-all duration-300 ${isHovered ? "mt-6" : "mt-4"
+            }`}
         >
           <a
             href={member.linkedin}
