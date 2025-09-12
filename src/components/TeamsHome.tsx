@@ -29,6 +29,8 @@ const TeamsHome = () => {
         { src: "/home/teams/23.png", alt: "Varun" },
         { src: "/home/teams/24.png", alt: "Varun" },
         { src: "/home/teams/25.png", alt: "Varun" },
+        { src: "/home/teams/26.png", alt: "Varun" },
+        { src: "/home/teams/27.png", alt: "Varun" },
     ]
 
     return (
