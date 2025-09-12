@@ -43,6 +43,8 @@ export const TeamHero: React.FC = () => {
               <p className="text-white text-sm font-poppins tracking-wide opacity-60">
                 Scroll to explore
               </p>
+              <div className="h-16"></div>
+
               <div className="w-6 h-0.5 bg-white/20 rounded-full"></div>
             </div>
           </div>

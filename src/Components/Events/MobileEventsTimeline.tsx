@@ -53,7 +53,7 @@ export const MobileEventsTimeline: React.FC<MobileEventsTimelineProps> = ({
         </div>
 
         {/* Events List */}
-        <div className="space-y-10">
+        <div className="space-y-16">
           {events.map((event, index) => (
             <MobileEventCard
               key={event.id}

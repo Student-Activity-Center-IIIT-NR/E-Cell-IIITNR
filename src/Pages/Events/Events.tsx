@@ -2,45 +2,45 @@
 import { ECellHeader } from "../../components/Header";
 import { ECellFooter } from "../../components/Footer";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import { Timeline } from "../../components/Timeline/Timeline";
-import { MobileEventsTimeline } from "../../components/Events/MobileEventsTimeline";
+import { Timeline } from "../../Components/Timeline/Timeline";
+import { MobileEventsTimeline } from "../../Components/Events/MobileEventsTimeline";
 
 export default function Events() {
   const timelineEvents = [
     {
       id: 1,
       title: "E-SUMMIT",
-      date: "23 JUNE 2022",
-      subheading: "Disrupt",
+      date: "Feb 2026",
+      subheading: "E-Summit",
       description:
-        "A platform where you compete in teams to pitch your ideas and sell the products that are given to you on spot",
+        "E-Summit is our flagship event where the captivating magic of Hogwarts meets the ingenuity of entrepreneurship. It aims to foster entrepreneurial spirits with its magical and innovative activities, inspiring individuals to transform innovative ideas into successful ventures.",
       buttonText: "READ MORE",
     },
     {
       id: 2,
-      title: "HACKATHON",
-      date: "23 JUNE 2022",
+      title: "DISRUPT",
+      date: "Nov 2025",
       subheading: "Disrupt",
       description:
-        "A platform where you compete in teams to pitch your ideas and sell the products that are given to you on spot",
+        "Disrupt is a platform where you compete in teams to debate and defend your ideas while challenging others' perspectives in an intellectual battle of wits",
       buttonText: "READ MORE",
     },
     {
       id: 3,
-      title: "WORKSHOP",
-      date: "23 JUNE 2022",
-      subheading: "Disrupt",
+      title: "Pitch Perfect",
+      date: "To be Announced",
+      subheading: "Pitch Perfect",
       description:
-        "A platform where you compete in teams to pitch your ideas and sell the products that are given to you on spot",
+        "Pitch Perfect is a platform where you compete in teams to pitch your ideas and sell the products that are given to you on spot",
       buttonText: "READ MORE",
     },
     {
       id: 4,
-      title: "CONFERENCE",
-      date: "23 JUNE 2026",
-      subheading: "Keynote Session",
+      title: "To be Announced",
+      date: "To be Announced",
+      subheading: "To be Announced",
       description:
-        "Inspiring keynote speaker session, where industry insights and innovative ideas will shape your future success",
+        "To be Announced",
       buttonText: "READ MORE",
     },
   ];
@@ -168,7 +168,7 @@ export default function Events() {
               </div>
             </div>
           </section>
-
+          <div className="h-16"></div>
           <ECellFooter />
         </div>
       </main>

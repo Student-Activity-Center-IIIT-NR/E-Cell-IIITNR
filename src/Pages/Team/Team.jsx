@@ -1,71 +1,245 @@
 "use client";
 import { ECellHeader } from "../../components/Header";
 import { ECellFooter } from "../../components/Footer";
-import { TeamHero } from "../../components/Team/TeamHero";
-import { TeamIntro } from "../../components/Team/TeamIntro";
-import { TeamMember } from "../../components/Team/TeamMember";
+import { TeamHero } from "../../Components/Team/TeamHero";
+import { TeamIntro } from "../../Components/Team/TeamIntro";
+import { TeamMember } from "../../Components/Team/TeamMember";
 
 export default function Teams() {
   const teamMembers = [
     {
       id: 1,
-      name: "Alex Johnson",
+      name: "Asmit Shaw",
       position: "President",
-      department: "Computer Science",
-      image: "https://i.pravatar.cc/200?img=1",
+      image: "/team/2.png",
       linkedin: "#",
-      email: "alex@ecell.com",
-      bio: "Leading innovation with vision and passion for entrepreneurship.",
+      email: "asmit24101@iiitnr.edu.in",
     },
     {
       id: 2,
-      name: "Sarah Chen",
+      name: "Ananya R Nair",
       position: "Vice President",
-      department: "Business Administration",
-      image: "https://i.pravatar.cc/200?img=2",
+      image: "/team/3.png",
       linkedin: "#",
-      email: "sarah@ecell.com",
-      bio: "Strategic thinker driving organizational excellence.",
+      email: "ananya24101@iiitnr.edu.in",
     },
     {
       id: 3,
-      name: "Michael Rodriguez",
-      position: "Technical Lead",
-      department: "Engineering",
-      image: "https://i.pravatar.cc/200?img=3",
+      name: "Fahmin Mohammed K K",
+      position: "Web Dev Head",
+      image: "/team/1.png",
       linkedin: "#",
-      email: "michael@ecell.com",
-      bio: "Tech innovator building the future of digital solutions.",
+      email: "fahmin24101@iiitnr.edu.in",
     },
     {
       id: 4,
-      name: "Emily Davis",
-      position: "Marketing Head",
-      department: "Marketing",
-      image: "https://i.pravatar.cc/200?img=4",
-      linkedin: "#",
-      email: "emily@ecell.com",
-      bio: "Creative storyteller connecting brands with audiences.",
+      name: "Varun Bhargava",
+      position: "Core",
+      image: "/team/4.png",
+      linkedin: "https://www.linkedin.com/in/varunbhargava22",
+      email: "varun24101@iiitnr.edu.in",
     },
     {
       id: 5,
-      name: "David Kim",
-      position: "Finance Manager",
-      department: "Finance",
-      image: "https://i.pravatar.cc/200?img=5",
-      linkedin: "#",
-      email: "david@ecell.com",
-      bio: "Financial strategist ensuring sustainable growth.",
+      name: "Divyansh Rangari",
+      position: "Core",
+      image: "/team/5.png",
+      linkedin:
+        "https://www.linkedin.com/in/divyansh-rangari-2b2196326?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+      email: "divyansh24100@iiitnr.edu.in",
     },
     {
       id: 6,
-      name: "Lisa Thompson",
-      position: "Events Coordinator",
-      department: "Management",
-      image: "https://i.pravatar.cc/200?img=6",
-      linkedin: "#",
-      email: "lisa@ecell.com",
-      bio: "Event orchestrator creating memorable experiences.",
+      name: "Himanshu Deshmukh",
+      position: "Senior Team",
+      image: "/team/6.png",
+      linkedin:
+        "https://www.linkedin.com/in/himanshu-deshmukh-2591a9325?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      email: "himanshu24100@iiitnr.edu.in",
+    },
+    {
+      id: 7,
+      name: "Siddhant Singh",
+      position: "Senior Team",
+      image: "/team/7.png",
+      linkedin:
+        "https://www.linkedin.com/in/siddhant-singh-b5ab99314?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      email: "siddhant24100@iiitnr.edu.in",
+    },
+    {
+      id: 8,
+      name: "Shreyash Rai",
+      position: "Senior Team",
+      image: "/team/8.png",
+      linkedin:
+        "https://www.linkedin.com/in/shreyash-rai-3aa123251?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      email: "shreyash24101@iiitnr.edu.in",
+    },
+    {
+      id: 9,
+      name: "Asmit Shaw",
+      position: "President",
+      image: "/team/9.png",
+      linkedin: "https://in.linkedin.com/in/asmit-shaw-6a09a2315",
+      email: "asmit24101@iiitnr.edu.in",
+    },
+    {
+      id: 10,
+      name: "Srijan Kapoor",
+      position: "Senior Team",
+      image: "/team/10.png",
+      linkedin:
+        "https://www.linkedin.com/in/srijan-kapoor-4425b6326?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      email: "srijan24102@iiitnr.edu.in",
+    },
+    {
+      id: 11,
+      name: "Shashank Bhoi",
+      position: "Core",
+      image: "/team/11.png",
+      linkedin: "https://linkedin.com/in/shashank-bhoi-01b637334",
+      email: "shashank24101@iiitnr.edu.in",
+    },
+    {
+      id: 12,
+      name: "Aditya Goyal",
+      position: "Senior Team",
+      image: "/team/12.png",
+      linkedin:
+        "https://www.linkedin.com/in/aditya-goyal-3835b8326?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+      email: "aditya24100@iiitnr.edu.in",
+    },
+    {
+      id: 13,
+      name: "Srishti Tripathi",
+      position: "Senior Team",
+      image: "/team/13.png",
+      linkedin: "https://www.linkedin.com/in/srishti-tripathi-509a4a332/",
+      email: "srishti24100@iiitnr.edu.in",
+    },
+    {
+      id: 14,
+      name: "Soumya Awasthi",
+      position: "Senior Team",
+      image: "/team/14.png",
+      linkedin:
+        "https://www.linkedin.com/in/soumya-awasthi-714323332?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      email: "soumya24101@iiitnr.edu.in",
+    },
+    {
+      id: 15,
+      name: "Navyansh Singh",
+      position: "Senior Team",
+      image: "/team/15.png",
+      linkedin:
+        "https://www.linkedin.com/in/navyansh-singh-a0125632a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      email: "navyansh24102@iiitnr.edu.in",
+    },
+    {
+      id: 16,
+      name: "Rahul Barma",
+      position: "Senior Team",
+      image: "/team/16.png",
+      linkedin: "https://www.linkedin.com/in/rahulbarma",
+      email: "rahul24102@iiitnr.edu.in",
+    },
+    {
+      id: 17,
+      name: "Fahmin Mohammed K K",
+      position: "Core",
+      image: "/team/17.png",
+      linkedin:
+        "https://www.linkedin.com/in/fahminmohammed?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      email: "fahmin24101@iiitnr.edu.in",
+    },
+    {
+      id: 18,
+      name: "Pranjali Upadhyay",
+      position: "Core",
+      image: "/team/18.png",
+      linkedin:
+        "https://www.linkedin.com/in/pranjali-upadhyay-a981a0304?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+      email: "pranjali24101@iiitnr.edu.in",
+    },
+    {
+      id: 19,
+      name: "Tanishq Bhattacharjee",
+      position: "Senior Team",
+      image: "/team/19.png",
+      linkedin: "https://www.linkedin.com/in/tanishq-bhattacharjee-44ba7b325/",
+      email: "tanishq24102@iiitnr.edu.in",
+    },
+    {
+      id: 20,
+      name: "Palak",
+      position: "Senior Team",
+      image: "/team/20.png",
+      linkedin: "https://www.linkedin.com/in/tanishq-bhattacharjee-44ba7b325/",
+      email: "tanishq24102@iiitnr.edu.in",
+    },
+    {
+      id: 21,
+      name: "Thomas Sajeev Varghese",
+      position: "Senior Team",
+      image: "/team/21.png",
+      linkedin: "https://www.linkedin.com/in/tanishq-bhattacharjee-44ba7b325/",
+      email: "tanishq24102@iiitnr.edu.in",
+    },
+    {
+      id: 22,
+      name: "Swastik Yadav",
+      position: "Senior Team",
+      image: "/team/22.png",
+      linkedin: "https://www.linkedin.com/in/tanishq-bhattacharjee-44ba7b325/",
+      email: "tanishq24102@iiitnr.edu.in",
+    },
+    {
+      id: 23,
+      name: "Arpita Dash",
+      position: "Senior Team",
+      image: "/team/23.png",
+      linkedin: "https://www.linkedin.com/in/tanishq-bhattacharjee-44ba7b325/",
+      email: "tanishq24102@iiitnr.edu.in",
+    },
+    {
+      id: 24,
+      name: "Rudraprakash Dahariya",
+      position: "Senior Team",
+      image: "/team/24.png",
+      linkedin: "https://www.linkedin.com/in/tanishq-bhattacharjee-44ba7b325/",
+      email: "tanishq24102@iiitnr.edu.in",
+    },
+    {
+      id: 25,
+      name: "Karan Ramdas Jadhav",
+      position: "Senior Team",
+      image: "/team/25.png",
+      linkedin: "https://www.linkedin.com/in/tanishq-bhattacharjee-44ba7b325/",
+      email: "tanishq24102@iiitnr.edu.in",
+    },
+    {
+      id: 26,
+      name: "Karishma Singh Roy",
+      position: "Senior Team",
+      image: "/team/26.png",
+      linkedin: "https://www.linkedin.com/in/tanishq-bhattacharjee-44ba7b325/",
+      email: "tanishq24102@iiitnr.edu.in",
+    },
+    {
+      id: 27,
+      name: "Abhay Yadav",
+      position: "Senior Team",
+      image: "/team/27.png",
+      linkedin: "https://www.linkedin.com/in/tanishq-bhattacharjee-44ba7b325/",
+      email: "tanishq24102@iiitnr.edu.in",
+    },
+    {
+      id: 28,
+      name: "Ayush Singh  ",
+      position: "Senior Team",
+      image: "/team/28.png",
+      linkedin: "https://www.linkedin.com/in/tanishq-bhattacharjee-44ba7b325/",
+      email: "tanishq24102@iiitnr.edu.in",
     },
   ];
 
@@ -158,41 +332,172 @@ export default function Teams() {
                     member={teamMembers[0]}
                     index={0}
                     isFeatured={true}
+                  />{" "}
+                  <TeamMember
+                    member={teamMembers[1]}
+                    index={1}
+                    isFeatured={true}
                   />
                 </div>
+                <div className="h-16"></div>
 
-                {/* Enhanced Elegant Divider with More Space */}
-                <div className="relative flex items-center justify-center my-24 sm:my-28 md:my-32">
-                  <div className="absolute inset-0 flex items-center">
-                    <div className="w-full border-t border-white/15"></div>
-                  </div>
-                  <div className="relative bg-black px-8">
-                    <div className="flex space-x-3">
-                      <div className="w-3 h-3 bg-white/25 rounded-full animate-pulse"></div>
-                      <div
-                        className="w-3 h-3 bg-white/40 rounded-full animate-pulse"
-                        style={{ animationDelay: "0.2s" }}
-                      ></div>
-                      <div
-                        className="w-3 h-3 bg-white/25 rounded-full animate-pulse"
-                        style={{ animationDelay: "0.4s" }}
-                      ></div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Executive Team Section */}
+                {/* Website Team Section */}
                 <div>
                   <div className="text-center mb-16 sm:mb-20 md:mb-24">
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white font-poppins mb-6">
-                      Executive Team
+                      Website Team
                     </h2>
                     <div className="w-32 h-1 bg-gradient-to-r from-transparent via-white/60 to-transparent mx-auto"></div>
                   </div>
 
-                  {/* Enhanced Grid Layout with More Space */}
                   <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 sm:gap-12 md:gap-16 lg:gap-20">
-                    {teamMembers.slice(1).map((member, index) => (
+                    {teamMembers.slice(2, 5).map((member, index) => (
+                      <div
+                        key={member.id}
+                        className={`
+                          transform transition-all duration-500 hover:scale-105
+                          ${index % 3 === 0 ? "xl:translate-y-0" : ""}
+                          ${index % 3 === 1 ? "xl:translate-y-6" : ""}
+                          ${index % 3 === 2 ? "xl:translate-y-12" : ""}
+                        `}
+                        style={{
+                          animationDelay: `${index * 0.15}s`,
+                        }}
+                      >
+                        <TeamMember member={member} index={index} />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div className="h-16"></div>
+
+                {/* Design Team Section */}
+                <div>
+                  <div className="text-center mb-16 sm:mb-20 md:mb-24">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white font-poppins mb-6">
+                      Design Team
+                    </h2>
+                    <div className="w-32 h-1 bg-gradient-to-r from-transparent via-white/60 to-transparent mx-auto"></div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 sm:gap-12 md:gap-16 lg:gap-20">
+                    {teamMembers.slice(5, 8).map((member, index) => (
+                      <div
+                        key={member.id}
+                        className={`
+                          transform transition-all duration-500 hover:scale-105
+                          ${index % 3 === 0 ? "xl:translate-y-0" : ""}
+                          ${index % 3 === 1 ? "xl:translate-y-6" : ""}
+                          ${index % 3 === 2 ? "xl:translate-y-12" : ""}
+                        `}
+                        style={{
+                          animationDelay: `${index * 0.15}s`,
+                        }}
+                      >
+                        <TeamMember member={member} index={index} />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div className="h-16"></div>
+                {/* Documentation Team Section */}
+                <div>
+                  <div className="text-center mb-16 sm:mb-20 md:mb-24">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white font-poppins mb-6">
+                      Documentation Team
+                    </h2>
+                    <div className="w-32 h-1 bg-gradient-to-r from-transparent via-white/60 to-transparent mx-auto"></div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 sm:gap-12 md:gap-16 lg:gap-20">
+                    {teamMembers.slice(8, 11).map((member, index) => (
+                      <div
+                        key={member.id}
+                        className={`
+                          transform transition-all duration-500 hover:scale-105
+                          ${index % 3 === 0 ? "xl:translate-y-0" : ""}
+                          ${index % 3 === 1 ? "xl:translate-y-6" : ""}
+                          ${index % 3 === 2 ? "xl:translate-y-12" : ""}
+                        `}
+                        style={{
+                          animationDelay: `${index * 0.15}s`,
+                        }}
+                      >
+                        <TeamMember member={member} index={index} />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div className="h-16"></div>
+                {/* Events and PR Team Section */}
+                <div>
+                  <div className="text-center mb-16 sm:mb-20 md:mb-24">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white font-poppins mb-6">
+                      Events and PR Team
+                    </h2>
+                    <div className="w-32 h-1 bg-gradient-to-r from-transparent via-white/60 to-transparent mx-auto"></div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 sm:gap-12 md:gap-16 lg:gap-20">
+                    {teamMembers.slice(11, 14).map((member, index) => (
+                      <div
+                        key={member.id}
+                        className={`
+                          transform transition-all duration-500 hover:scale-105
+                          ${index % 3 === 0 ? "xl:translate-y-0" : ""}
+                          ${index % 3 === 1 ? "xl:translate-y-6" : ""}
+                          ${index % 3 === 2 ? "xl:translate-y-12" : ""}
+                        `}
+                        style={{
+                          animationDelay: `${index * 0.15}s`,
+                        }}
+                      >
+                        <TeamMember member={member} index={index} />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div className="h-16"></div>
+                {/* Events Operations Team Section */}
+                <div>
+                  <div className="text-center mb-16 sm:mb-20 md:mb-24">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white font-poppins mb-6">
+                      Events Operations Team
+                    </h2>
+                    <div className="w-32 h-1 bg-gradient-to-r from-transparent via-white/60 to-transparent mx-auto"></div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 sm:gap-12 md:gap-16 lg:gap-20">
+                    {teamMembers.slice(14, 17).map((member, index) => (
+                      <div
+                        key={member.id}
+                        className={`
+                          transform transition-all duration-500 hover:scale-105
+                          ${index % 3 === 0 ? "xl:translate-y-0" : ""}
+                          ${index % 3 === 1 ? "xl:translate-y-6" : ""}
+                          ${index % 3 === 2 ? "xl:translate-y-12" : ""}
+                        `}
+                        style={{
+                          animationDelay: `${index * 0.15}s`,
+                        }}
+                      >
+                        <TeamMember member={member} index={index} />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div className="h-16"></div>
+                {/* Social Media Team Section */}
+                <div>
+                  <div className="text-center mb-16 sm:mb-20 md:mb-24">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white font-poppins mb-6">
+                      Social Media Team
+                    </h2>
+                    <div className="w-32 h-1 bg-gradient-to-r from-transparent via-white/60 to-transparent mx-auto"></div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 sm:gap-12 md:gap-16 lg:gap-20">
+                    {teamMembers.slice(17, 21).map((member, index) => (
                       <div
                         key={member.id}
                         className={`
@@ -213,7 +518,7 @@ export default function Teams() {
               </div>
             </div>
           </section>
-
+          <div className="h-16"></div>
           <ECellFooter />
         </div>
       </main>

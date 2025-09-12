@@ -6,8 +6,8 @@
 }
 .icon{
     position: absolute;
-    right: 0%;
- 
+    right: 16px;
+    top: 16px;
 }
 .nav-list{
     cursor: pointer;
