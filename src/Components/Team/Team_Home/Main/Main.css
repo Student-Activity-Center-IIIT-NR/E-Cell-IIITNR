@@ -126,7 +126,7 @@
     }
     .main-content{
         flex-direction: column;
-        overflow-y: hidden;
+        /* overflow-y: hidden; */
     }
     .main-head{
         margin: auto;

@@ -45,7 +45,7 @@ function DrawerAppBar(props) {
           <ListItemButton href="#about">About</ListItemButton>
         </ListItem>
         <ListItem>
-          <ListItemButton href="#event">Event</ListItemButton>
+          <ListItemButton href="#events">Event</ListItemButton>
         </ListItem>
         <Link to="/esummit">
           <ListItem>
@@ -165,13 +165,13 @@ function DrawerAppBar(props) {
               }}
               className="nav-list"
             >
-              <a href="#homePage">
+              <a href="#home">
                 <li>Home</li>
               </a>
               <a href="#about">
                 <li>About</li>
               </a>
-              <a href="#event">
+              <a href="#events">
                 <li>Event</li>
               </a>
               <NavLink to="/esummit">
@@ -184,7 +184,7 @@ function DrawerAppBar(props) {
                 <li>Gallery</li>
               </a>
             </ul>
-            <a href="#contact">
+            <a href="#footer">
               <div className="contact">
                 <div>Contact Us</div>
               </div>

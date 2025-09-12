@@ -11,6 +11,7 @@ interface NavLinkProps {
     children: React.ReactNode;
     onClick?: () => void;
     className?: string;
+    style?: React.CSSProperties;
 }
 
 export const NavLink: React.FC<NavLinkProps> = ({
@@ -18,11 +19,13 @@ export const NavLink: React.FC<NavLinkProps> = ({
     children,
     onClick,
     className = '',
+    style,
 }) => (
     <Link
         to={to}
-        className={`text-white/95 hover:text-white transition font-semibold tracking-tight whitespace-nowrap ${className}`}
+        className={`text-white/95 hover:text-white transition font-semibold tracking-tight whitespace-nowrap text-center ${className}`}
         onClick={onClick}
+        style={style}
     >
         {children}
     </Link>
@@ -58,25 +61,75 @@ export const ECellHeader: React.FC = () => {
         setIsMobileMenuOpen(false);
     };
 
-    return (
-        <header className="w-full bg-black sticky top-0 z-[9999]">
-            <nav className="w-full max-w-7xl mx-auto px-6 sm:px-12 lg:px-24">
-                {/* Desktop / Tablet */}
-                <div className="hidden md:grid grid-cols-7 items-center h-24 justify-items-center w-full">
-                    <NavLink to="/">Home</NavLink>
-                    <NavLink to="/team">Team</NavLink>
-                    <NavLink to="/#about">About Us</NavLink>
+    const handleSectionClick = (sectionId: string) => {
+        closeMobileMenu();
+        // Small delay to ensure menu closes before scrolling
+        setTimeout(() => {
+            const element = document.getElementById(sectionId.replace('#', ''));
+            if (element) {
+                const headerHeight = 96; // Approximate header height (h-24 = 96px)
+                const elementPosition = element.offsetTop - headerHeight;
+                window.scrollTo({
+                    top: elementPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }, 100);
+    };
 
-                    <div className="flex items-center justify-center">
+    const handleDesktopSectionClick = (sectionId: string) => {
+        const element = document.getElementById(sectionId.replace('#', ''));
+        if (element) {
+            const headerHeight = 96; // Approximate header height (h-24 = 96px)
+            const elementPosition = element.offsetTop - headerHeight;
+            window.scrollTo({
+                top: elementPosition,
+                behavior: 'smooth'
+            });
+        }
+    };
+
+    return (
+        <header className="w-full sticky top-0 z-[9999]" style={{ width: '100%', position: 'sticky', margin: 0, padding: 0, backgroundColor: '#000000' }}>
+            <nav style={{ width: '100%', maxWidth: '100%', padding: '0 clamp(2rem, 5vw, 6rem)', margin: 0, boxSizing: 'border-box' }}>
+                {/* Desktop / Tablet */}
+                <div className="hidden md:grid grid-cols-7 items-center h-24 w-full place-items-center" style={{ placeItems: 'center', gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr 1fr 1fr', width: '100%', maxWidth: '100%', minWidth: '100%' }}>
+                    <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
+                        <button onClick={() => handleDesktopSectionClick('#home')} className="text-white/95 hover:text-white transition font-semibold tracking-tight whitespace-nowrap cursor-pointer" style={{ textAlign: 'center' }}>Home</button>
+                    </div>
+
+                    <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
+                        <NavLink to="/team" style={{ textAlign: 'center' }}>Team</NavLink>
+                    </div>
+
+                    <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
+                        <button onClick={() => handleDesktopSectionClick('#events')} className="text-white/95 hover:text-white transition font-semibold tracking-tight whitespace-nowrap cursor-pointer" style={{ textAlign: 'center' }}>Events</button>
+                    </div>
+
+                    <div className="flex items-center justify-center" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                         <ECellLogo className="h-20 w-20" />
                     </div>
-                    <NavLink to="/events">Events</NavLink>
-                    <NavLink to="/esummit">E‑Summit</NavLink>
-                    <NavLink to="/#contact">Contact Us</NavLink>
+
+                    <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
+                        <button onClick={() => handleDesktopSectionClick('#gallery')} className="text-white/95 hover:text-white transition font-semibold tracking-tight whitespace-nowrap cursor-pointer" style={{ textAlign: 'center' }}>Gallery</button>
+                    </div>
+
+                    <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
+                        <NavLink to="/esummit" style={{ textAlign: 'center' }}>E‑Summit</NavLink>
+                    </div>
+
+                    <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
+                        <button onClick={() => handleDesktopSectionClick('#footer')} className="text-white/95 hover:text-white transition font-semibold tracking-tight whitespace-nowrap cursor-pointer" style={{ textAlign: 'center' }}>Contact Us</button>
+                    </div>
                 </div>
 
                 {/* Mobile Header */}
-                <div className="md:hidden flex items-center justify-end h-20 w-full">
+                <div className="md:hidden flex items-center justify-between h-20 w-full">
+                    {/* Mobile Logo */}
+                    <div className="flex items-center ml-4">
+                        <ECellLogo className="h-12 w-12" />
+                    </div>
+
                     {/* Hamburger Menu Button */}
                     <button
                         onClick={toggleMobileMenu}
@@ -106,24 +159,27 @@ export const ECellHeader: React.FC = () => {
                     </button>
 
                     <div className="flex flex-col items-center justify-center h-full space-y-8">
-                        <NavLink to="/" onClick={closeMobileMenu} className="text-2xl font-bold">
+                        <button onClick={() => handleSectionClick('#home')} className="text-2xl font-bold text-white/95 hover:text-white transition cursor-pointer">
                             Home
-                        </NavLink>
-                        <NavLink to="/teams" onClick={closeMobileMenu} className="text-2xl font-bold">
+                        </button>
+                        <NavLink to="/team" onClick={closeMobileMenu} className="text-2xl font-bold">
                             Team
                         </NavLink>
-                        <NavLink to="/#about" onClick={closeMobileMenu} className="text-2xl font-bold">
-                            About Us
-                        </NavLink>
-                        <NavLink to="/events" onClick={closeMobileMenu} className="text-2xl font-bold">
+                        <button onClick={() => handleSectionClick('#events')} className="text-2xl font-bold text-white/95 hover:text-white transition cursor-pointer">
                             Events
-                        </NavLink>
-                        <NavLink to="/#e-summit" onClick={closeMobileMenu} className="text-2xl font-bold">
+                        </button>
+                        <button onClick={() => handleSectionClick('#teams')} className="text-2xl font-bold text-white/95 hover:text-white transition cursor-pointer">
+                            Our Team
+                        </button>
+                        <button onClick={() => handleSectionClick('#gallery')} className="text-2xl font-bold text-white/95 hover:text-white transition cursor-pointer">
+                            Gallery
+                        </button>
+                        <NavLink to="/esummit" onClick={closeMobileMenu} className="text-2xl font-bold">
                             E‑Summit
                         </NavLink>
-                        <NavLink to="/#contact" onClick={closeMobileMenu} className="text-2xl font-bold">
+                        <button onClick={() => handleSectionClick('#footer')} className="text-2xl font-bold text-white/95 hover:text-white transition cursor-pointer">
                             Contact Us
-                        </NavLink>
+                        </button>
                     </div>
                 </div>
             </nav>
