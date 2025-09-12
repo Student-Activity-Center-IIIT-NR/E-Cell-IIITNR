@@ -61,8 +61,8 @@ export default function Home() {
 
                 </div>
               </div>
-              <div className="mt-8 grid md:grid-cols-2 gap-8 relative max-w-6xl mx-auto">
-                <div className="space-y-3">
+              <div className="mt-24 sm:mt-32 md:mt-40 lg:mt-48 grid md:grid-cols-2 gap-8 relative max-w-6xl mx-auto px-4 md:px-0">
+                <div className="space-y-3 text-center md:text-left">
                   <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-wider text-neutral-300 font-poppins">
                     DARE TO DREAM,
                   </h2>
@@ -78,13 +78,22 @@ export default function Home() {
                     Join us in shaping
                     tomorrow's innovations!
                   </p>
+
+                  {/* E-Cell Logo */}
+                  <div className="flex justify-center md:justify-start mt-8">
+                    <img
+                      src="/EcellLogo3D.png"
+                      alt="E-Cell Logo"
+                      className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 object-contain"
+                    />
+                  </div>
                 </div>
                 {/* Vertical white line separator for md and up */}
                 <div
                   className="hidden md:block absolute left-1/2 top-0 h-full w-px bg-white/80 -translate-x-1/2"
                   aria-hidden="true"
                 ></div>
-                <div className="text-xl sm:text-xl md:text-xl text-neutral-300 leading-6">
+                <div className="text-xl sm:text-xl md:text-xl text-neutral-300 leading-6 text-center md:text-left">
                   <p className="mb-3 font-poppins">
                     E‑Cell IIIT Naya Raipur is a non‑profit student‑run
                     organization where we explore the evolving world of
@@ -107,20 +116,22 @@ export default function Home() {
           {/* EVENTS */}
           <section
             id="events"
-            className="py-24 w-full "
+            className="py-24 w-full"
           >
-            <div className="w-full px-8 sm:px-12 lg:px-16 flex flex-col items-center">
+            <div className="w-full px-4 sm:px-8 lg:px-16 flex flex-col items-center">
               <div className="max-w-6xl mx-auto w-full">
-                <div className="text-center">
+                <div className="text-center mb-8">
                   <div className="h-16 bg-black"></div>
 
-                  <h2 className="text-5xl md:text-6xl font-extrabold tracking-[0.3em]">
+                  <h2 className="text-5xl md:text-6xl font-extrabold tracking-[0.3em] px-4">
                     EVENTS
                   </h2>
                   <div className="h-16 bg-black"></div>
 
                 </div>
-                <Events />
+                <div className="flex justify-center w-full">
+                  <Events />
+                </div>
               </div>
             </div>
           </section>

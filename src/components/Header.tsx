@@ -59,8 +59,8 @@ export const ECellHeader: React.FC = () => {
     };
 
     return (
-        <header className="w-full bg-black sticky top-0 z-50 flex justify-center">
-            <nav className="w-[65%] max-w-7xl px-6 sm:px-12 lg:px-24">
+        <header className="w-full bg-black sticky top-0 z-[9999]">
+            <nav className="w-full max-w-7xl mx-auto px-6 sm:px-12 lg:px-24">
                 {/* Desktop / Tablet */}
                 <div className="hidden md:grid grid-cols-7 items-center h-24 justify-items-center w-full">
                     <NavLink to="/">Home</NavLink>
@@ -76,25 +76,35 @@ export const ECellHeader: React.FC = () => {
                 </div>
 
                 {/* Mobile Header */}
-                <div className="md:hidden flex items-center justify-between h-20">
-                    <ECellLogo className="h-16 w-16 shrink-0" />
-
+                <div className="md:hidden flex items-center justify-end h-20 w-full">
                     {/* Hamburger Menu Button */}
                     <button
                         onClick={toggleMobileMenu}
-                        className="p-2 text-white hover:text-neutral-300 transition-colors"
+                        className="p-4 mr-4 text-white hover:text-white/80 transition-all duration-300"
                         aria-label="Toggle mobile menu"
                     >
-                        <div className="w-6 h-6 flex flex-col justify-center items-center">
-                            <span className={`block w-5 h-0.5 bg-current transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-1' : ''}`}></span>
-                            <span className={`block w-5 h-0.5 bg-current transition-all duration-300 mt-1 ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
-                            <span className={`block w-5 h-0.5 bg-current transition-all duration-300 mt-1 ${isMobileMenuOpen ? '-rotate-45 -translate-y-1' : ''}`}></span>
+                        <div className="w-8 h-8 flex flex-col justify-center items-center gap-1.5">
+                            <span className={`block w-7 h-0.5 bg-current transition-all duration-300 origin-center ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
+                            <span className={`block w-7 h-0.5 bg-current transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0 scale-0' : ''}`}></span>
+                            <span className={`block w-7 h-0.5 bg-current transition-all duration-300 origin-center ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
                         </div>
                     </button>
                 </div>
 
                 {/* Mobile Menu Overlay */}
-                <div className={`md:hidden fixed inset-0 bg-black/95 z-40 transition-opacity duration-300 ${isMobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+                <div className={`md:hidden fixed inset-0 bg-black/95 z-[10001] transition-opacity duration-300 ${isMobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+                    {/* Close button in top-right corner */}
+                    <button
+                        onClick={closeMobileMenu}
+                        className="absolute top-4 right-4 p-4 text-white hover:text-white/80 transition-all duration-300"
+                        aria-label="Close mobile menu"
+                    >
+                        <div className="w-8 h-8 flex flex-col justify-center items-center">
+                            <span className="block w-7 h-0.5 bg-current rotate-45"></span>
+                            <span className="block w-7 h-0.5 bg-current -rotate-45 absolute"></span>
+                        </div>
+                    </button>
+
                     <div className="flex flex-col items-center justify-center h-full space-y-8">
                         <NavLink to="/" onClick={closeMobileMenu} className="text-2xl font-bold">
                             Home
