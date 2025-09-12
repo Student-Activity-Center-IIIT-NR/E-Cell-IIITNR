@@ -1,165 +1,177 @@
+"use client";
 import { ECellHeader } from "../../components/Header";
 import { ECellFooter } from "../../components/Footer";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import { Timeline } from "../../components/Timeline/Timeline";
+import { MobileEventsTimeline } from "../../components/Events/MobileEventsTimeline";
 
 export default function Events() {
-  return (
-    <div className="min-h-screen bg-neutral-900 text-white">
-      <ECellHeader />
-
-      {/* Hero */}
-      <section className="mx-auto max-w-6xl px-4 pt-16 pb-12 text-center">
-        <h1 className="text-[10vw] leading-none font-extrabold tracking-[0.15em] md:text-8xl">
-          EVENTS
-        </h1>
-        <div className="mx-auto mt-8 h-10 w-6 rounded bg-neutral-700" />
-      </section>
-
-      {/* Timeline */}
-      <section className="relative">
-        {/* True vertical line down the center */}
-        <div className="pointer-events-none absolute left-1/2 top-0 -ml-[1px] h-full w-[2px] bg-neutral-700" />
-
-        <div className="mx-auto max-w-6xl px-4 py-8">
-          {/* Sequential list — each item is a row on the timeline */}
-          <ol className="relative space-y-28">
-            <TimelineItem
-              side="left"
-              title="E-SUMMIT"
-              subtitle="Disrupt"
-              desc="A platform where you compete in teams to pitch your ideas and sell the products that are given to you on spot"
-              date="23 JUNE 2022"
-            />
-
-            <TimelineItem
-              side="right"
-              title="HACKATHON"
-              subtitle="Disrupt"
-              desc="A platform where you compete in teams to pitch your ideas and sell the products that are given to you on spot"
-              date="23 JUNE 2022"
-            />
-
-            <TimelineItem
-              side="left"
-              title="WORKSHOP"
-              subtitle="Disrupt"
-              desc="A platform where you compete in teams to pitch your ideas and sell the products that are given to you on spot"
-              date="23 JUNE 2022"
-            />
-
-            <TimelineItem
-              side="right"
-              title="CONFERENCE"
-              subtitle="Keynote Session"
-              desc="Inspiring keynote speaker session, where industry insights and innovative ideas will shape your future success"
-              date="23 JUNE 2026"
-            />
-          </ol>
-        </div>
-      </section>
-
-      <ECellFooter />
-    </div>
-  );
-}
-
-/**
- * TimelineItem — sequential row with center date, dashed connector and side card.
- */
-function TimelineItem({
-  side,
-  title,
-  subtitle,
-  desc,
-  date,
-}: {
-  side: "left" | "right",
-  title: string,
-  subtitle: string,
-  desc: string,
-  date: string,
-}) {
-  const isLeft = side === "left";
+  const timelineEvents = [
+    {
+      id: 1,
+      title: "E-SUMMIT",
+      date: "23 JUNE 2022",
+      subheading: "Disrupt",
+      description:
+        "A platform where you compete in teams to pitch your ideas and sell the products that are given to you on spot",
+      buttonText: "READ MORE",
+    },
+    {
+      id: 2,
+      title: "HACKATHON",
+      date: "23 JUNE 2022",
+      subheading: "Disrupt",
+      description:
+        "A platform where you compete in teams to pitch your ideas and sell the products that are given to you on spot",
+      buttonText: "READ MORE",
+    },
+    {
+      id: 3,
+      title: "WORKSHOP",
+      date: "23 JUNE 2022",
+      subheading: "Disrupt",
+      description:
+        "A platform where you compete in teams to pitch your ideas and sell the products that are given to you on spot",
+      buttonText: "READ MORE",
+    },
+    {
+      id: 4,
+      title: "CONFERENCE",
+      date: "23 JUNE 2026",
+      subheading: "Keynote Session",
+      description:
+        "Inspiring keynote speaker session, where industry insights and innovative ideas will shape your future success",
+      buttonText: "READ MORE",
+    },
+  ];
 
   return (
-    <li className="relative">
-      {/* Row layout: two halves; content appears on one side only */}
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-0">
-        {/* Left side */}
-        <div className={`${isLeft ? "order-1" : "order-2"} md:order-1`}>
-          {isLeft && <Card title={title} subtitle={subtitle} desc={desc} />}
-        </div>
-
-        {/* Right side */}
+    <div className="w-full min-h-screen font-poppins">
+      <main className="bg-black text-white selection:bg-neutral-800 selection:text-white w-full relative min-h-screen overflow-hidden">
+        {/* Enhanced Background Elements */}
         <div
-          className={`${isLeft ? "order-2" : "order-1"
-            } md:order-2 flex md:justify-end`}
-        >
-          {!isLeft && (
-            <Card title={title} subtitle={subtitle} desc={desc} align="right" />
-          )}
+          className="absolute inset-0 w-full h-full opacity-70 sm:opacity-80 md:opacity-90 pointer-events-none z-0"
+          style={{
+            backgroundImage: `url('/background-pattern.svg')`,
+            backgroundRepeat: "repeat",
+            backgroundSize: "auto",
+            backgroundPosition: "center",
+            filter: "brightness(3) contrast(1.5)",
+          }}
+        />
+
+        {/* Premium Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-transparent to-black/60 pointer-events-none z-1"></div>
+
+        {/* Enhanced Hexagonal Elements - Responsive */}
+        <div className="absolute inset-0 pointer-events-none z-5">
+          {/* Mobile Hexagonal Elements */}
+          <div className="block sm:hidden">
+            <div className="absolute top-16 right-4 opacity-20">
+              <div className="w-8 h-8 bg-gray-600 transform rotate-45 shadow-xl shadow-white/10"></div>
+            </div>
+            <div className="absolute top-32 right-8 opacity-15">
+              <div className="w-6 h-6 bg-gray-500 transform rotate-45 shadow-lg shadow-white/10"></div>
+            </div>
+            <div className="absolute bottom-20 left-4 opacity-20">
+              <div className="w-10 h-10 bg-gray-600 transform rotate-45 shadow-xl shadow-white/10"></div>
+            </div>
+          </div>
+
+          {/* Tablet Hexagonal Elements */}
+          <div className="hidden sm:block md:hidden">
+            <div className="absolute top-20 right-8 opacity-25">
+              <div className="w-12 h-12 bg-gray-600 transform rotate-45 shadow-xl shadow-white/10"></div>
+            </div>
+            <div className="absolute top-36 right-16 opacity-20">
+              <div className="w-10 h-10 bg-gray-500 transform rotate-45 shadow-lg shadow-white/10"></div>
+            </div>
+            <div className="absolute bottom-24 left-8 opacity-25">
+              <div className="w-14 h-14 bg-gray-600 transform rotate-45 shadow-xl shadow-white/10"></div>
+            </div>
+          </div>
+
+          {/* Desktop Hexagonal Elements */}
+          <div className="hidden md:block">
+            <div className="absolute top-20 right-10 opacity-30">
+              <div className="w-16 h-16 bg-gray-600 transform rotate-45 shadow-2xl shadow-white/10"></div>
+            </div>
+            <div className="absolute top-32 right-24 opacity-25">
+              <div className="w-12 h-12 bg-gray-500 transform rotate-45 shadow-xl shadow-white/10"></div>
+            </div>
+            <div className="absolute top-44 right-16 opacity-20">
+              <div className="w-20 h-20 bg-gray-700 transform rotate-45 shadow-2xl shadow-white/10"></div>
+            </div>
+            <div className="absolute bottom-32 left-10 opacity-30">
+              <div className="w-14 h-14 bg-gray-600 transform rotate-45 shadow-2xl shadow-white/10"></div>
+            </div>
+            <div className="absolute bottom-20 left-24 opacity-25">
+              <div className="w-18 h-18 bg-gray-500 transform rotate-45 shadow-xl shadow-white/10"></div>
+            </div>
+          </div>
         </div>
-      </div>
 
-      {/* Center dot */}
-      <span
-        className="absolute left-1/2 top-8 -ml-[6px] h-3 w-3 rounded-full bg-white"
-        aria-hidden
-      />
+        {/* Content */}
+        <div className="relative z-10">
+          <ECellHeader />
 
-      {/* Date badge next to the center line */}
-      <div className="pointer-events-none absolute left-1/2 top-0 -translate-x-1/2">
-        <div className="flex items-center gap-3 text-lg font-semibold md:text-xl">
-          <span
-            className="inline-block h-5 w-5 rounded bg-neutral-700"
-            aria-hidden
-          />
-          <span>{date}</span>
+          {/* Enhanced Header Section - Mobile Responsive */}
+          <section className="relative w-full flex flex-col items-center pt-8 sm:pt-12 md:pt-16 lg:pt-20 pb-6 sm:pb-8 md:pb-12 lg:pb-16">
+            <div className="w-full px-4 sm:px-6 md:px-8 flex flex-col items-center">
+              <div className="max-w-6xl mx-auto w-full text-center">
+                {/* Responsive Title */}
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-extrabold tracking-[0.15em] sm:tracking-[0.2em] md:tracking-[0.25em] lg:tracking-[0.3em] text-white font-poppins mb-4 sm:mb-6 md:mb-8 drop-shadow-2xl">
+                  <span className="bg-gradient-to-b from-white via-gray-100 to-gray-300 bg-clip-text text-transparent">
+                    EVENTS
+                  </span>
+                </h1>
+
+                {/* Scroll Indicator - Hidden on mobile, visible on larger screens */}
+                <div className="hidden sm:flex justify-center mb-6 sm:mb-8">
+                  <div className="text-center">
+                    <div className="relative">
+                      <LazyLoadImage
+                        src="/mouse.png"
+                        alt="Scroll indicator"
+                        width={108}
+                        height={155}
+                        className="mx-auto drop-shadow-lg w-16 h-auto sm:w-20 md:w-24 lg:w-28"
+                      />
+                    </div>
+                    <p className="text-white text-xs sm:text-sm mt-3 sm:mt-4 font-poppins tracking-widest opacity-80">
+                      Scroll Down
+                    </p>
+                  </div>
+                </div>
+
+                {/* Mobile Scroll Hint */}
+                <div className="block sm:hidden mb-4">
+                  <p className="text-white text-sm font-poppins tracking-wider opacity-70 animate-pulse">
+                    Swipe up to explore
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Events Content Section */}
+          <section className="relative w-full pb-12 sm:pb-16 md:pb-20">
+            <div className="max-w-7xl mx-auto">
+              {/* Creative Mobile Events Layout (sm and below) */}
+              <div className="block sm:hidden">
+                <MobileEventsTimeline events={timelineEvents} />
+              </div>
+
+              {/* Desktop/Tablet Timeline Layout (sm and above) */}
+              <div className="hidden sm:block px-4 sm:px-6 md:px-8">
+                <Timeline events={timelineEvents} />
+              </div>
+            </div>
+          </section>
+
+          <ECellFooter />
         </div>
-      </div>
-
-      {/* Dashed connector from line to the card — matches timeline thickness */}
-      <div
-        className={`absolute top-10 h-0 border-t-2 border-neutral-700 border-dashed ${isLeft
-          ? "left-1/2 -translate-x-1/2 md:w-[44%]"
-          : "right-1/2 translate-x-1/2 md:w-[44%]"
-          } w-[40%]`}
-        aria-hidden
-      />
-    </li>
-  );
-}
-
-function Card({
-  title,
-  subtitle,
-  desc,
-  align = "left",
-}: {
-  title: string,
-  subtitle: string,
-  desc: string,
-  align?: "left" | "right",
-}) {
-  const alignClass = align === "right" ? "md:ml-16" : "md:mr-16";
-  return (
-    <article
-      className={`w-full max-w-xl rounded-2xl border border-neutral-800 bg-neutral-900 p-6 shadow-xl ${alignClass}`}
-    >
-      <h3 className="text-3xl font-extrabold tracking-wider">{title}</h3>
-      <div className="mt-2 h-[2px] w-24 bg-neutral-700" />
-      <p className="mt-4 text-sm uppercase tracking-widest text-neutral-400">
-        {subtitle}
-      </p>
-      <p className="mt-2 leading-relaxed text-neutral-300">{desc}</p>
-      <div className="mt-6">
-        <button
-          className="group inline-flex items-center gap-3 rounded-md border border-neutral-700 px-4 py-2 text-sm font-semibold tracking-wider hover:bg-neutral-800"
-          type="button"
-        >
-          READ MORE{" "}
-          <span className="font-mono text-neutral-400">-----&gt;</span>
-        </button>
-      </div>
-    </article>
+      </main>
+    </div>
   );
 }

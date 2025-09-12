@@ -4,7 +4,7 @@ import Navbar from './Components/Navbar/Navbar.jsx'
 import Load from './Components/Load_Page/Load.jsx';
 import ScrollToTop from "react-scroll-to-top";
 import Team from './Pages/Team/Team.jsx';
-
+import Events from "./Pages/Events/Events.tsx"
 import Gallery from './Components/Home/Gallery/Gallery'
 import { Route, Routes } from 'react-router-dom';
 import ESummitHome from './Pages/E-Summit/Home/ESummitHome.jsx';
@@ -14,6 +14,7 @@ import Level1 from './Pages/CrypticHunt/Levels/Level1/Level1.jsx';
 import Level2 from './Pages/CrypticHunt/Levels/Level2/Level2.jsx';
 import Level5 from './Pages/CrypticHunt/Levels/Level5/Level5.jsx';
 import Level4 from './Pages/CrypticHunt/Levels/Level4/Level4.jsx';
+import Events_esummit from './Pages/E-Summit/Events_esummit/Events_esummit.jsx';
 const App = () => {
 
 
@@ -40,6 +41,7 @@ const App = () => {
     <div className="main">
       <Routes>
         <Route path="/" element={<Home />}/>
+        <Route path='/events' element={<Events />} />
         <Route path="/team" element={<Team/>}/>
         <Route path="/esummit" element={<ESummitHome/>}/>
         <Route path="/cryptic" element={<CrypticHome/>}/>
