@@ -162,6 +162,7 @@ export default function Home() {
                   <h2 className="text-6xl md:text-7xl font-extrabold tracking-[0.3em] mb-6">
                     OUR TEAM
                   </h2>
+                  <div className="h-6"></div>
                 </div>
                 <TeamsHome />
                 {/* Call to Action */}

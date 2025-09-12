@@ -159,27 +159,21 @@ export const ECellHeader: React.FC = () => {
                     </button>
 
                     <div className="flex flex-col items-center justify-center h-full space-y-8">
-                        <button onClick={() => handleSectionClick('#home')} className="text-2xl font-bold text-white/95 hover:text-white transition cursor-pointer">
+                        <NavLink to="/" onClick={closeMobileMenu} className="text-2xl font-bold">
                             Home
-                        </button>
+                        </NavLink>
                         <NavLink to="/team" onClick={closeMobileMenu} className="text-2xl font-bold">
                             Team
                         </NavLink>
-                        <button onClick={() => handleSectionClick('#events')} className="text-2xl font-bold text-white/95 hover:text-white transition cursor-pointer">
+                        <NavLink to="/events" onClick={closeMobileMenu} className="text-2xl font-bold">
                             Events
-                        </button>
-                        <button onClick={() => handleSectionClick('#teams')} className="text-2xl font-bold text-white/95 hover:text-white transition cursor-pointer">
-                            Our Team
-                        </button>
-                        <button onClick={() => handleSectionClick('#gallery')} className="text-2xl font-bold text-white/95 hover:text-white transition cursor-pointer">
-                            Gallery
-                        </button>
+                        </NavLink>
                         <NavLink to="/esummit" onClick={closeMobileMenu} className="text-2xl font-bold">
                             E‑Summit
                         </NavLink>
-                        <button onClick={() => handleSectionClick('#footer')} className="text-2xl font-bold text-white/95 hover:text-white transition cursor-pointer">
+                        <NavLink to="/" onClick={closeMobileMenu} className="text-2xl font-bold">
                             Contact Us
-                        </button>
+                        </NavLink>
                     </div>
                 </div>
             </nav>

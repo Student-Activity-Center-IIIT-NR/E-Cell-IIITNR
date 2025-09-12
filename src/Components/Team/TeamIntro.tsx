@@ -11,15 +11,18 @@ export const TeamIntro: React.FC = () => {
               Visionaries
             </span>
           </h2>
+          <div className="h-2"></div>
           <div className="w-16 h-0.5 bg-gradient-to-r from-white to-gray-400 rounded-full mb-4"></div>
           <p className="text-gray-300 text-base sm:text-lg leading-relaxed font-poppins">
             Behind every great movement are exceptional leaders who
             dare to dream, innovate, and inspire others to reach
             beyond their limits.
           </p>
+          <div className="h-2"></div>
+
         </div>
       </div>
 
-    </div>
+    </div >
   );
 };
