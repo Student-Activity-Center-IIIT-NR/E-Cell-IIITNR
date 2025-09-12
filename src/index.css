@@ -55,8 +55,7 @@ html {
 }
 
 body{
-  background-color: #000000;
-  background-image: url('./assets/Images/BG/E-Cell_BG.png');
+  background-color: #000000 !important;
   background-size: cover;
   overflow-x: hidden;
   height: 100%;
@@ -230,10 +229,12 @@ body::-webkit-scrollbar-thumb {
   #root {
     min-height: 100vh;
     overflow-x: hidden;
+    background-color: #000000;
   }
   
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
+    /* Remove bg-background to prevent CSS variable override */
   }
   .font-karantina {
     font-family: karantina, serif !important;
