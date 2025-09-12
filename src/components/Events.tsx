@@ -7,35 +7,21 @@ export function Events() {
                 "E-Summit was an incredible platform that connected me with industry leaders and fellow entrepreneurs. The networking opportunities were invaluable for my startup journey.",
             name: "E-Summit",
             designation: "Annual Entrepreneurship Summit",
-            src: "/home/events/esummit.jpg",
+            src: "/home/events/1.png",
         },
         {
             quote:
-                "The E-Cell Awards recognized our innovative business model and gave us the confidence to scale our operations. It's amazing to be celebrated for entrepreneurial excellence.",
-            name: "E-Cell Awards",
-            designation: "Entrepreneurial Excellence Recognition",
-            src: "/home/events/awards.jpg",
+                "The Disrupt event was an exciting platform for pitching innovative ideas and engaging in thought-provoking debates. It provided a great opportunity to showcase our business model and connect with industry leaders through competitive discussions.",
+            name: "Disrupt",
+            designation: "   ",
+            src: "/home/events/2.png",
         },
         {
             quote:
-                "Participating in E-Cell Debates sharpened my critical thinking and helped me understand different perspectives on business challenges. Great learning experience!",
-            name: "E-Cell Debates",
-            designation: "Business Case Study Discussions",
-            src: "/home/events/case-study.jpg",
-        },
-        {
-            quote:
-                "The E-Cell Hackathon pushed our team to think creatively and build innovative solutions under pressure. We learned so much about rapid prototyping and market validation.",
-            name: "E-Cell Hackathons",
-            designation: "Innovation & Problem Solving",
-            src: "/home/events/hackathon.jpg",
-        },
-        {
-            quote:
-                "E-Cell Quiz tested our knowledge of entrepreneurship, economics, and business strategy. It was both challenging and educational for aspiring entrepreneurs.",
-            name: "E-Cell Quiz",
-            designation: "Entrepreneurship Knowledge Challenge",
-            src: "/home/events/quiz.jpg",
+                "A night filled with laughter, music, and good vibes - it was an absolutely incredible experience when Vivek Samtani graced our stage with his amazing performance. The energy was electric and the crowd was mesmerized by his captivating presence and musical talent.",
+            name: "Artist Night",
+            designation: " ",
+            src: "/home/events/3.png",
         },
     ];
     return <AnimatedTestimonials testimonials={testimonials} />;
