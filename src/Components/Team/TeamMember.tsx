@@ -52,9 +52,6 @@ export const TeamMember: React.FC<TeamMemberProps> = ({
                 <p className="text-xl sm:text-2xl text-gray-200 font-semibold font-poppins mb-2">
                   {member.position}
                 </p>
-                <p className="text-gray-300 text-base font-poppins opacity-90 mb-4">
-                  Department of {member.department}
-                </p>
                 <p className="text-gray-200 text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
                   {member.bio}
                 </p>
