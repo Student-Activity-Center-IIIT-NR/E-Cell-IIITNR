@@ -8,6 +8,7 @@ import Events from "./Pages/Events/Events.tsx"
 import Gallery from './Components/Home/Gallery/Gallery'
 import { Route, Routes } from 'react-router-dom';
 import ESummitHome from './Pages/E-Summit/Home/ESummitHome.jsx';
+import ESummitFullScreen from './Pages/E-Summit/ESummitFullScreen.tsx';
 import CrypticHome from './Pages/CrypticHunt/Home/Home.jsx';
 import Level3 from './Pages/CrypticHunt/Levels/Level3/Level3.jsx';
 import Level1 from './Pages/CrypticHunt/Levels/Level1/Level1.jsx';
@@ -43,7 +44,8 @@ const App = () => {
         <Route path="/" element={<Home />}/>
         <Route path='/events' element={<Events />} />
         <Route path="/team" element={<Team/>}/>
-        <Route path="/esummit" element={<ESummitHome/>}/>
+        {/* <Route path="/esummit" element={<ESummitHome/>}/> */}
+        <Route path="/esummit" element={<ESummitFullScreen/>}/>
         <Route path="/cryptic" element={<CrypticHome/>}/>
         <Route path="/level1" element={<Level1/>} />
         <Route path="/level2" element={<Level2/>} />
