@@ -1,0 +1,57 @@
+*{
+ 
+    box-sizing: border-box;
+    font-family: "Montserrat";
+  
+}
+.icon{
+    position: absolute;
+    right: 16px;
+    top: 16px;
+}
+.nav-list{
+    cursor: pointer;
+}
+.contact{
+    font-family:Montserrat ;
+    color:#3C7EFF;
+    font-weight: 700;
+    font-size: 1rem;
+    text-align: center;
+    border:1px solid #3C7EFF;
+    border-radius: 1.7rem;
+    padding: 1vh;
+    height: 6vh;
+   padding-top: 1vh;
+   cursor: pointer;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src:url("../../assets/Fonts/Montserrat-SemiBold.ttf");
+  }
+  @media (max-width:930px) and (min-width:755px) {
+.contact{
+    font-size: 0.8rem;
+    padding-top: 1.4vh;
+}
+   
+}
+@font-face {
+    font-family: Montserrat;
+    src:url("../../assets/Fonts/Montserrat-SemiBold.ttf");
+  }
+  @media (max-width:755px) {
+.contact{
+    font-size: 0.65rem;
+    padding-top: 1.6vh;
+}
+   
+}
+@media (min-height:700px) {
+    .contact{
+        padding-top:7px;
+       height:33px;
+    }
+       
+    }

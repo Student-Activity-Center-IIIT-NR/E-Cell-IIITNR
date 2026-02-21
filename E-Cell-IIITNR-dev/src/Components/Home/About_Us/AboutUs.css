@@ -1,0 +1,34 @@
+.about-us{
+    width: 70%;
+    margin: auto;
+    margin-bottom: 80px;
+}
+.box2{
+    display: flex;
+    flex-direction: column;
+}
+
+.box2-head{
+    color: white;
+    font-size: 5vw;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.box2-text{
+    font-weight: 200;
+    text-align: justify;
+    margin: auto;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+    line-height: 27.78px;
+    color: white;
+}
+
+@media (max-width:630px) {
+    .box2-text{
+        font-size: 13px;
+        line-height: 19.78px;
+    }
+
+}

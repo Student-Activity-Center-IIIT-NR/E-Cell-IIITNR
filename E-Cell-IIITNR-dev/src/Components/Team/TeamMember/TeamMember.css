@@ -1,0 +1,15 @@
+.css-46bh2p-MuiCardContent-root{
+    padding: 0;
+}
+
+.card-content{
+    margin-top: 20px;
+}
+
+#team-card-img{
+    object-fit: contain;
+    width: 100%;
+}
+.MuiCard-root{
+    height: 100%;
+}
