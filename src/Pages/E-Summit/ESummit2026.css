@@ -1,0 +1,643 @@
+/* E-Summit 2026 page - scoped to avoid clashes with main site */
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Space+Grotesk:wght@400;600;700&display=swap");
+
+.esummit2026-page {
+  min-height: 100vh;
+  color: #f8f3e8;
+  background: radial-gradient(circle at top, #1c2bd6, #13206f 55%, #0c153a 100%);
+  position: relative;
+  overflow-x: hidden;
+}
+
+.esummit2026-edge-strip {
+  width: 100%;
+  height: 16px;
+  object-fit: cover;
+  position: relative;
+  z-index: 3;
+  display: block;
+}
+
+.esummit2026-edge-strip--top {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.esummit2026-edge-strip--bottom {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.esummit2026-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.22;
+  background-image: radial-gradient(circle at 20% 20%, #ffffff22 0 2px, transparent 2px),
+    radial-gradient(circle at 80% 30%, #ffffff22 0 2px, transparent 2px),
+    radial-gradient(circle at 30% 70%, #ffffff1a 0 1.5px, transparent 1.5px);
+  background-size: 140px 140px, 180px 180px, 120px 120px;
+  pointer-events: none;
+}
+
+.esummit2026-page main,
+.esummit2026-page header,
+.esummit2026-page footer {
+  position: relative;
+  z-index: 1;
+}
+
+.esummit2026-nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 80px 12px;
+  gap: 48px;
+  font-family: "Space Grotesk", sans-serif;
+  background-image: var(--esummit-hero-bg);
+  background-size: cover;
+  background-position: center top;
+  background-color: rgba(28, 43, 214, 0.6);
+  background-blend-mode: overlay;
+}
+
+.esummit2026-nav::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(12, 21, 58, 0.35);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.esummit2026-nav > * {
+  position: relative;
+  z-index: 1;
+}
+
+.esummit2026-nav-links {
+  display: flex;
+  gap: 40px;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.esummit2026-nav-links--left,
+.esummit2026-nav-links--right {
+  flex: 1;
+}
+
+.esummit2026-nav-links--left {
+  justify-content: flex-end;
+}
+
+.esummit2026-nav-links--right {
+  justify-content: flex-start;
+}
+
+.esummit2026-nav-logo {
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.esummit2026-nav-logo img {
+  width: 56px;
+  height: auto;
+}
+
+.esummit2026-nav-links a {
+  color: #f8f3e8;
+  text-decoration: none;
+  opacity: 0.95;
+  padding: 4px 0;
+}
+
+.esummit2026-hero {
+  display: grid;
+  place-items: center;
+  padding: 60px 24px 30px;
+  position: relative;
+  background-image: var(--esummit-hero-bg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.esummit2026-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(28, 43, 214, 0.5);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.esummit2026-home-link {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 10;
+  color: #f8f3e8;
+  text-decoration: none;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background: rgba(12, 21, 58, 0.6);
+  transition: background 0.2s;
+}
+
+.esummit2026-home-link:hover {
+  background: rgba(12, 21, 58, 0.9);
+}
+
+.esummit2026-music-btn {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #f8d325;
+  border: 2px solid #0c153a;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 0 rgba(12, 21, 58, 0.3);
+  z-index: 100;
+}
+
+.esummit2026-music-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 rgba(12, 21, 58, 0.4);
+}
+
+.esummit2026-music-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 0 rgba(12, 21, 58, 0.3);
+}
+
+.esummit2026-hero-card {
+  width: min(960px, 90vw);
+  text-align: center;
+  padding: 40px 32px;
+  color: #1a1205;
+  border-radius: 20px;
+  transform: rotate(-1deg);
+  position: relative;
+  z-index: 5;
+}
+
+.esummit2026-hero-image {
+  width: min(820px, 80vw);
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(0 12px 0 rgba(0, 0, 0, 0.45));
+}
+
+/* Full-width section: golden borders edge-to-edge, content spread across width */
+.esummit2026-intro {
+  width: 100%;
+  margin: 0;
+  padding: 48px 80px 48px;
+  border-top: 3px solid #f8d325;
+  border-bottom: 3px solid #f8d325;
+  box-sizing: border-box;
+}
+
+.esummit2026-intro-row {
+  display: grid;
+  grid-template-columns: 1.2fr auto 1fr;
+  gap: 48px 64px;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.esummit2026-intro-left {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.esummit2026-intro-wordmark-img {
+  width: min(360px, 70vw);
+  height: auto;
+  display: block;
+}
+
+.esummit2026-intro-para {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0;
+  color: #f8f3e8;
+}
+
+.esummit2026-intro-divider {
+  width: 1px;
+  align-self: stretch;
+  min-height: 100px;
+  background: rgba(255, 255, 255, 0.5);
+  flex-shrink: 0;
+}
+
+.esummit2026-intro-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 10px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  justify-self: end;
+}
+
+.esummit2026-intro-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.esummit2026-intro-link img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.esummit2026-section-title {
+  font-family: "Bungee", sans-serif;
+  font-size: clamp(42px, 6vw, 72px);
+  text-align: center;
+  margin: 40px 0 20px;
+  color: #f8d325;
+  text-shadow: 0 6px 0 #0b0b0b;
+}
+
+.esummit2026-section-title--image {
+  margin: 24px 0 28px;
+  text-shadow: none;
+}
+
+.esummit2026-section-title--image img {
+  width: min(620px, 88vw);
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.esummit2026-schedule {
+  width: min(1100px, 92vw);
+  margin: 0 auto 40px;
+}
+
+.esummit2026-coming-soon {
+  font-family: "Bungee", sans-serif;
+  font-size: clamp(32px, 5vw, 56px);
+  text-align: center;
+  color: #f8d325;
+  text-shadow: 0 4px 0 #0b0b0b;
+  margin: 32px 0 48px;
+}
+
+.esummit2026-timeline {
+  display: grid;
+  gap: 80px;
+  position: relative;
+  padding: 60px 0;
+}
+
+.esummit2026-timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 60px;
+  bottom: 60px;
+  width: 2px;
+  background: #f8d325;
+  transform: translateX(-50%);
+}
+
+.esummit2026-timeline-row {
+  display: grid;
+  grid-template-columns: 1fr 80px 1fr;
+  align-items: center;
+  gap: 18px;
+  position: relative;
+  min-height: 160px;
+  padding: 0 40px;
+}
+
+.esummit2026-timeline-row:nth-child(odd) .esummit2026-event-badge.left {
+  justify-self: end;
+}
+
+.esummit2026-timeline-row:nth-child(odd) .esummit2026-event-badge.left::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -60px;
+  width: 60px;
+  height: 2px;
+  background: #f8d325;
+  transform: translateY(-50%);
+}
+
+.esummit2026-timeline-row:nth-child(odd) .esummit2026-event-badge.right {
+  justify-self: start;
+}
+
+.esummit2026-timeline-row:nth-child(odd) .esummit2026-event-badge.right::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -60px;
+  width: 60px;
+  height: 2px;
+  background: #f8d325;
+  transform: translateY(-50%);
+}
+
+.esummit2026-timeline-row:nth-child(even) .esummit2026-event-badge.left {
+  justify-self: end;
+}
+
+.esummit2026-timeline-row:nth-child(even) .esummit2026-event-badge.left::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -60px;
+  width: 60px;
+  height: 2px;
+  background: #f8d325;
+  transform: translateY(-50%);
+}
+
+.esummit2026-timeline-row:nth-child(even) .esummit2026-event-badge.right {
+  justify-self: start;
+}
+
+.esummit2026-timeline-row:nth-child(even) .esummit2026-event-badge.right::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -60px;
+  width: 60px;
+  height: 2px;
+  background: #f8d325;
+  transform: translateY(-50%);
+}
+
+.esummit2026-timeline-mid {
+  display: grid;
+  place-items: center;
+}
+
+.esummit2026-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #f8d325;
+  box-shadow: 0 0 0 6px #0c153a;
+}
+
+.esummit2026-event-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.esummit2026-event-badge img {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  display: block;
+}
+
+.esummit2026-event-badge.left {
+  justify-self: end;
+}
+
+.esummit2026-event-badge.right {
+  justify-self: start;
+}
+
+.esummit2026-events {
+  width: 100%;
+  margin: 60px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.esummit2026-events-carousel-container {
+  width: 90%;
+  max-width: 1200px;
+  overflow: hidden;
+  margin-top: 40px;
+  border-radius: 20px;
+  border: 2px solid rgba(248, 211, 37, 0.5);
+  box-shadow: inset 0 0 0 1px rgba(248, 211, 37, 0.3), 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.esummit2026-events-carousel {
+  display: flex;
+  gap: 25px;
+  padding: 20px;
+  animation: esummit2026Scroll 40s linear infinite;
+  will-change: transform;
+}
+
+@keyframes esummit2026Scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.esummit2026-events-carousel:hover {
+  animation-play-state: paused;
+}
+
+.esummit2026-event-card-carousel {
+  flex: 0 0 320px;
+  background: #1b2fae;
+  border: 1px solid rgba(248, 211, 37, 0.4);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  min-height: 360px;
+}
+
+.esummit2026-event-card-carousel:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 25px 60px rgba(248, 211, 37, 0.3);
+}
+
+.esummit2026-event-card-image {
+  width: 100%;
+  height: 240px;
+  object-fit: contain;
+  display: block;
+  background: #0f2880;
+  padding: 15px;
+}
+
+.esummit2026-event-card-name {
+  padding: 20px;
+  color: #f8d325;
+  font-family: "Bungee", sans-serif;
+  text-align: center;
+  margin: 0;
+  font-size: 22px;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.esummit2026-gallery {
+  width: min(1100px, 92vw);
+  margin: 0 auto 80px;
+  padding-right: ;
+}
+
+.esummit2026-gallery-masonry {
+  position: relative;
+  width: 100%;
+  min-height: 520px;
+}
+
+/* Masonry component (used inside E-Summit 2026) - matches e-summit-2026 gallery */
+.esummit-masonry-container {
+  position: relative;
+  width: 100%;
+  min-height: 520px;
+}
+
+.esummit-masonry-item {
+  position: absolute;
+  cursor: pointer;
+}
+
+.esummit-masonry-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  box-shadow: 0 10px 50px -10px rgba(0, 0, 0, 0.2);
+}
+
+.esummit-masonry-overlay {
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.5), rgba(56, 189, 248, 0.5));
+  opacity: 0;
+  pointer-events: none;
+}
+
+.esummit2026-footer {
+  background: #f8f3e8;
+  color: #1b1b1b;
+  display: grid;
+  grid-template-columns: auto repeat(3, 1fr);
+  gap: 30px;
+  padding: 40px 80px 60px;
+  align-items: start;
+}
+
+.esummit2026-footer-brand {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+}
+
+.esummit2026-footer-col h3 {
+  font-family: "Bungee", sans-serif;
+  margin: 0 0 12px;
+}
+
+.esummit2026-footer-col a {
+  display: block;
+  color: #1b1b1b;
+  text-decoration: none;
+  margin-bottom: 8px;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+@media (max-width: 900px) {
+  .esummit2026-nav {
+    flex-direction: column;
+    padding: 20px 24px;
+  }
+
+  .esummit2026-nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .esummit2026-intro {
+    padding: 32px 24px;
+  }
+
+  .esummit2026-intro-row {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 24px;
+    text-align: center;
+  }
+
+  .esummit2026-intro-left {
+    align-items: center;
+  }
+
+  .esummit2026-intro-wordmark-img {
+    margin: 0 auto;
+  }
+
+  .esummit2026-intro-divider {
+    width: 100%;
+    height: 1px;
+    min-height: 1px;
+    align-self: center;
+  }
+
+  .esummit2026-intro-link {
+    justify-self: center;
+  }
+
+  .esummit2026-timeline-row {
+    grid-template-columns: 1fr 40px 1fr;
+  }
+
+  .esummit2026-footer {
+    grid-template-columns: 1fr;
+    padding: 40px 24px;
+  }
+}
