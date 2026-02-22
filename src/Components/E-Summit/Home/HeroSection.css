@@ -1,7 +1,10 @@
 .esummit-hero-section {
     background-image: url('../../../assets/E-Summit/ESummitHomeBG.png');
-    height: 100svh;
+    min-height: 100vh;
+    height: 100vh;
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     z-index: 10000;
   }
   
@@ -14,11 +17,15 @@
   }
   
   .esummit-hero-section-img1 {
-    height: 200px;
+    height: clamp(300px, 40vw, 550px);
+    max-width: 90vw;
+    object-fit: contain;
   }
   
   .esummit-hero-section-img2 {
-    height: 180px;
+    height: clamp(220px, 28vw, 400px);
+    max-width: 80vw;
+    object-fit: contain;
   }
   
   .esummit-countdown {
@@ -58,20 +65,20 @@
 
   @media (max-width:680px) {
     .esummit-hero-section-img1 {
-        height: 180px;
+        height: clamp(200px, 55vw, 320px);
       }
       
       .esummit-hero-section-img2 {
-        height: 120px;
+        height: clamp(150px, 40vw, 220px);
       }
   }
 
   @media (max-width:380px) {
     .esummit-hero-section-img1 {
-        height: 180px;
+        height: 200px;
       }
       
       .esummit-hero-section-img2 {
-        height: 100px;
+        height: 140px;
       }
   }

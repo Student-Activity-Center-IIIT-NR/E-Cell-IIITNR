@@ -8,7 +8,7 @@ import openUnstop from "./assets/OPEM UNSTOP.png";
 import navLogo from "./assets/W 1 (1).png";
 import scheduleHeading from "./assets/schedule.png";
 import eventsHeading from "./assets/EVENTS.png";
-import galleryTile from "./assets/schedule.png";
+import galleryTile from "./assets/gallery.png";
 import hackathonBadge from "./assets/HACKATHON_12.png";
 import mehboobaMusic from "./assets/Mehbooba Mehbooba Song.mp3";
 import grungeBackground from "./assets/grunge-style-starburst-background.jpg";
@@ -197,7 +197,9 @@ function App() {
         </section>
 
         <section id="gallery" className="gallery">
-          <h2 className="section-title">Gallery</h2>
+          <div className="section-title section-title--image">
+            <img src={galleryTile} alt="Gallery" loading="lazy" />
+          </div>
           <div className="gallery-masonry">
             <Masonry items={galleryItems} />
           </div>

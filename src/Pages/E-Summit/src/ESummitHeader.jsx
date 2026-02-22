@@ -53,7 +53,7 @@ export const ESummitHeader = ({ logoSrc }) => {
     };
 
     return (
-        <header className="w-full sticky top-0 z-[9999]" style={{ backgroundColor: '#000000' }}>
+        <header className="w-full sticky top-0 z-[9999]" style={{ backgroundColor: '#0c153a', borderBottom: '1px solid rgba(28,43,214,0.4)' }}>
             <nav className="w-full max-w-full px-8 md:px-24">
                 {/* Desktop / Tablet */}
                 <div className="hidden md:flex items-center justify-between h-24 w-full relative">
@@ -102,7 +102,7 @@ export const ESummitHeader = ({ logoSrc }) => {
                 </div>
 
                 {/* Mobile Menu Overlay */}
-                <div className={`md:hidden fixed inset-0 z-[10001] bg-black/95 transition-opacity duration-300 ${isMobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+                <div className={`md:hidden fixed inset-0 z-[10001] transition-opacity duration-300 ${isMobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`} style={{ backgroundColor: 'rgba(12,21,58,0.98)' }}>
                     {/* Close button in top-right corner */}
                     <button
                         onClick={closeMobileMenu}
