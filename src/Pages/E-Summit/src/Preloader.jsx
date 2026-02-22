@@ -87,7 +87,7 @@ const Preloader = ({ onComplete, audioRef }) => {
   if (!isVisible) return null;
 
   return (
-    <div className="preloader" onClick={isMobile && loadProgress === 100 ? handleSkip : undefined}>
+    <div className="preloader">
       <video
         className="preloader-video"
         autoPlay
@@ -98,23 +98,24 @@ const Preloader = ({ onComplete, audioRef }) => {
         <source src={videoBackground} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      
+
       {isMobile && isLoading && (
         <div className="loading-progress">
           <img src={summitLogo} alt="E-Summit 2026" className="loading-logo" />
           <div className="loading-percentage">{loadProgress}%</div>
           <div className="loading-text">Loading Experience...</div>
           <div className="progress-bar">
-            <div 
-              className="progress-fill" 
+            <div
+              className="progress-fill"
               style={{ width: `${loadProgress}%` }}
             ></div>
           </div>
         </div>
       )}
-      
+
+
       {isMobile && !isLoading && loadProgress === 100 && (
-        <div className="skip-hint">Tap to continue</div>
+        <div className="skip-hint">Loading complete</div>
       )}
     </div>
   );
