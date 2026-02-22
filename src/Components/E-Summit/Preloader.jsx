@@ -6,19 +6,23 @@ import videoBackground from "../../assets/E-Summit/2026/Video_Background_Removal
 
 const Preloader = ({ onComplete, audioRef }) => {
   const [isVisible, setIsVisible] = useState(true);
+  const isMobile = typeof window !== 'undefined' && window.innerWidth <= 768;
 
   useEffect(() => {
-    if (audioRef?.current) {
+    // Don't autoplay audio on mobile to save bandwidth
+    if (audioRef?.current && !isMobile) {
       audioRef.current.play().catch((err) => console.log("Audio play error:", err));
     }
 
+    // Faster preload on mobile (4s instead of 8s)
+    const duration = isMobile ? 4000 : 8000;
     const timer = setTimeout(() => {
       setIsVisible(false);
       if (onComplete) onComplete();
-    }, 8000);
+    }, duration);
 
     return () => clearTimeout(timer);
-  }, [onComplete, audioRef]);
+  }, [onComplete, audioRef, isMobile]);
 
   if (!isVisible) return null;
 
@@ -26,9 +30,10 @@ const Preloader = ({ onComplete, audioRef }) => {
     <div className="esummit-preloader">
       <video
         className="esummit-preloader-video"
-        autoPlay
+        autoPlay={!isMobile} // Don't autoplay on mobile
         muted
         playsInline
+        preload={isMobile ? "none" : "auto"} // Don't preload on mobile
         onEnded={() => {
           setIsVisible(false);
           if (onComplete) onComplete();
