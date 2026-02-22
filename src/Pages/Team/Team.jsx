@@ -45,8 +45,8 @@ export default function Teams() {
       name: "Sumit Kumar Sahoo",
       position: "Junior Team",
       image: "/team/Webdev_junior.jpeg",
-      linkedin: "#",
-      email: "#",
+      linkedin: "https://www.linkedin.com/in/sumit-kumar-sahoo-772sk1109/",
+      email: "sumitkumarsahoo772@gmail.com",
     },
     {
       id: 5,
