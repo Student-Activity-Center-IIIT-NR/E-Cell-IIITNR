@@ -82,7 +82,12 @@ function App() {
 
   return (
     <div className="page" style={{ "--hero-bg": `url(${grungeBackground})` }}>
-      <audio ref={audioRef} loop>
+      <audio 
+        ref={audioRef} 
+        loop 
+        preload="none"
+        crossOrigin="anonymous"
+      >
         <source src={mehboobaMusic} type="audio/mpeg" />
         Your browser does not support the audio element.
       </audio>
