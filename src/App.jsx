@@ -7,7 +7,7 @@ import Team from './Pages/Team/Team.jsx';
 import Events from "./Pages/Events/Events.tsx"
 import Gallery from './Components/Home/Gallery/Gallery'
 import { Route, Routes } from 'react-router-dom';
-import ESummit2026 from './Pages/E-Summit/ESummit2026.jsx';
+import ESummit2026 from './Pages/E-Summit/src/App.jsx';
 import CrypticHome from './Pages/CrypticHunt/Home/Home.jsx';
 import Level3 from './Pages/CrypticHunt/Levels/Level3/Level3.jsx';
 import Level1 from './Pages/CrypticHunt/Levels/Level1/Level1.jsx';
