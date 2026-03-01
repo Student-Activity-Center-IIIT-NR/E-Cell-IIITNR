@@ -4,7 +4,7 @@ import { ECellLogo } from "./Header";
 /** Footer: Beautiful and modern footer with reduced whitespace */
 export const ECellFooter: React.FC = () => {
     return (
-        <footer className="w-full bg-gradient-to-b from-black to-neutral-900 text-white/90 mt-16 border-t border-neutral-800">
+        <footer className="w-full text-white/90 mt-16" style={{ background: 'linear-gradient(to bottom, #0c153a, #13206f)', borderTop: '1px solid rgba(28,43,214,0.5)' }}>
             {/* Main footer content */}
             <div className="h-20"></div>
             <div className="w-full py-16">

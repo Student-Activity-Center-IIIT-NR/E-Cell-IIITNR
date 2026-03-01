@@ -30,17 +30,21 @@ const motionForce = (x: number, y: number): ParticleForce => {
 
 export default function App() {
   const { innerWidth, innerHeight } = useWindowSize();
+  // Reduce particles on mobile for better performance
+  const isMobile = innerWidth <= 768;
+  const maxParticles = isMobile ? 2000 : 8000; // 75% reduction on mobile
+  const entropy = isMobile ? 25 : 40;
 
   return (
     <ParticleImage
       src={"/EcellLogo3D.png"}
       width={600}
       scale={0.06}
-      entropy={40}
-      maxParticles={8000}
+      entropy={entropy}
+      maxParticles={maxParticles}
       particleOptions={particleOptions}
-      mouseMoveForce={motionForce}
-      touchMoveForce={motionForce}
+      mouseMoveForce={isMobile ? undefined : motionForce} // Disable mouse force on mobile
+      touchMoveForce={isMobile ? undefined : motionForce}
       backgroundColor="transparent"
     />
   );

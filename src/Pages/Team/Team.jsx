@@ -41,6 +41,14 @@ export default function Teams() {
       email: "tanishq24102@iiitnr.edu.in",
     },
     {
+      id: 28,
+      name: "Sumit Kumar Sahoo",
+      position: "Junior Team",
+      image: "/team/Webdev_junior.jpeg",
+      linkedin: "https://www.linkedin.com/in/sumit-kumar-sahoo-772sk1109/",
+      email: "sumitkumarsahoo772@gmail.com",
+    },
+    {
       id: 5,
       name: "Pranjali Upadhyay",
       position: "Core",
@@ -343,7 +351,7 @@ export default function Teams() {
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 sm:gap-12 md:gap-16 lg:gap-20">
-                    {teamMembers.slice(2, 4).map((member, index) => (
+                    {teamMembers.slice(2, 5).map((member, index) => (
                       <div
                         key={member.id}
                         className={`
@@ -375,7 +383,7 @@ export default function Teams() {
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 sm:gap-12 md:gap-16 lg:gap-20">
-                    {teamMembers.slice(4, 8).map((member, index) => (
+                    {teamMembers.slice(5, 9).map((member, index) => (
                       <div
                         key={member.id}
                         className={`
@@ -407,7 +415,7 @@ export default function Teams() {
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 sm:gap-12 md:gap-16 lg:gap-20">
-                    {teamMembers.slice(8, 14).map((member, index) => (
+                    {teamMembers.slice(9, 15).map((member, index) => (
                       <div
                         key={member.id}
                         className={`
@@ -439,7 +447,7 @@ export default function Teams() {
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 sm:gap-12 md:gap-16 lg:gap-20">
-                    {teamMembers.slice(14, 20).map((member, index) => (
+                    {teamMembers.slice(15, 21).map((member, index) => (
                       <div
                         key={member.id}
                         className={`
@@ -471,7 +479,7 @@ export default function Teams() {
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 sm:gap-12 md:gap-16 lg:gap-20">
-                    {teamMembers.slice(20, 24).map((member, index) => (
+                    {teamMembers.slice(21, 25).map((member, index) => (
                       <div
                         key={member.id}
                         className={`
@@ -503,7 +511,7 @@ export default function Teams() {
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 sm:gap-12 md:gap-16 lg:gap-20">
-                    {teamMembers.slice(24, 27).map((member, index) => (
+                    {teamMembers.slice(25, 28).map((member, index) => (
                       <div
                         key={member.id}
                         className={`

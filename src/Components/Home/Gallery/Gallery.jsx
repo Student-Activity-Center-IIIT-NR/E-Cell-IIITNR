@@ -20,17 +20,20 @@ AOS.init({
   once: true
 });
 const Gallery = () => {
+  // Detect mobile for performance optimization
+  const isMobile = window.innerWidth <= 630;
 
   const settings = {
     infinite:true,
     easing:'linear',
-    autoplaySpeed:1500,
+    autoplaySpeed: isMobile ? 4000 : 1500, // Slower on mobile
     autoplay:true,
-    dots: true,
-    speed: 500,
+    dots: !isMobile, // Disable dots on mobile to reduce DOM
+    speed: 400, // Slightly faster transition
     slidesToShow: 3,
     slidesToScroll: 1,
     initialSlide: 0,
+    lazyLoad: 'ondemand',
     responsive: [
       {
         breakpoint: 850,
@@ -38,7 +41,7 @@ const Gallery = () => {
           slidesToShow: 2,
           slidesToScroll: 1,
           infinite: true,
-          dots: true
+          dots: false
         }
       },
       {
@@ -46,14 +49,16 @@ const Gallery = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          initialSlide: 2
+          initialSlide: 2,
+          autoplaySpeed: 4500
         }
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
+          slidesToScroll: 1,
+          autoplaySpeed: 5000 // Even slower on small screens
         }
       }
     ]
@@ -75,7 +80,7 @@ const Gallery = () => {
             <img 
               src={image.img} 
               alt={`Slide ${index}`}
-              
+              loading="lazy"
               style={{ 
                 boxSizing:'border-box',
                 width: '100%',
@@ -83,6 +88,7 @@ const Gallery = () => {
                 height:'100%',
                 objectFit: 'cover',
                 border: '0.1rem solid #0803FF',
+                willChange: 'transform'
               }} 
             />
             </div>
