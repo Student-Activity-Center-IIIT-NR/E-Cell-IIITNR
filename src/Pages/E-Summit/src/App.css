@@ -47,6 +47,25 @@ footer {
   z-index: 1;
 }
 
+/* E-Summit navbar button hover: golden sliding underline */
+.esummit-nav-btn::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #f8d325, #ffc107);
+  border-radius: 2px;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.esummit-nav-btn:hover::after {
+  width: 100%;
+}
+.esummit-nav-btn:hover {
+  color: #f8d325 !important;
+}
+
 .nav {
   position: relative;
   display: flex;

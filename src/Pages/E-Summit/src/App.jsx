@@ -82,9 +82,9 @@ function App() {
 
   return (
     <div className="page" style={{ "--hero-bg": `url(${grungeBackground})` }}>
-      <audio 
-        ref={audioRef} 
-        loop 
+      <audio
+        ref={audioRef}
+        loop
         preload="none"
         crossOrigin="anonymous"
       >
@@ -117,7 +117,7 @@ function App() {
           </div>
           <div className="intro" style={{ marginTop: 0, alignItems: "center", paddingTop: "20px" }}>
             <div className="intro-media" style={{ padding: "0 2vw", display: "flex", alignItems: "center" }}>
-              <p style={{ margin: 0, fontSize: "clamp(16px, 3.5vw, 24px)", color: "#f8d325", fontFamily: "'Space Grotesk', sans-serif", fontWeight: "600", lineHeight: "1.6", letterSpacing: "0.02em" }}>
+              <p style={{ margin: 0, fontSize: "clamp(18px, 3.2vw, 26px)", color: "#f8d325", fontFamily: "'Baloo 2', 'Yatra One', 'Rozha One', cursive", fontWeight: "800", lineHeight: "1.5", letterSpacing: "0.03em", textShadow: "0 2px 12px rgba(248,211,37,0.25)" }}>
                 Welcome to the flagship event of Entrepreneur Cell of IIIT Naya
                 Raipur, where dreams take flight and ventures succeed. Join us in
                 shaping tomorrow&apos;s innovations.
