@@ -102,7 +102,7 @@ export default function Teams() {
           name: "Shubham Jaiswal",
           position: "Core",
           department: "Events and PR",
-          image: "/teams/shubham.jpeg",
+          image: "/teams/Shubham.png",
           linkedin: "https://www.linkedin.com/",
           email: "shubham24101@iiitnr.edu.in",
         },
