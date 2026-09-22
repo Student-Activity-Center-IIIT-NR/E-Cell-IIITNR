@@ -18,6 +18,20 @@
 @font-face {
   font-family: karantina;
   src: url('./assets/Fonts/Karantina-Regular.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: karantina;
+  src: url('./assets/Fonts/Karantina-Bold.ttf');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: karantina;
+  src: url('./assets/Fonts/Karantina-Light.ttf');
+  font-weight: 300;
+  font-style: normal;
 }
 @font-face {
   font-family: Poppins;

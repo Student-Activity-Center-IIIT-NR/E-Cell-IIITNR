@@ -136,14 +136,13 @@ export const CardCarousel: React.FC<CarouselProps> = ({
                 {/* Subtle dark gradient overlay at the bottom */}
                 <div className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-black/85 via-black/35 to-transparent pointer-events-none"></div>
 
-                {/* Position/Team overlay text matching the exact Montserrat Black font from the reference card */}
+                {/* Position/Team overlay text using karantina font */}
                 {item.position && (
                   <div className="absolute inset-x-0 bottom-0 pb-5 pt-3 px-3 flex justify-center items-center pointer-events-none">
                     <h3
-                      className="text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight text-center drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)] leading-tight"
+                      className="font-karantina text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-wider text-center drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)] leading-tight uppercase"
                       style={{
-                        fontFamily: "'Montserrat', sans-serif",
-                        fontWeight: 900,
+                        fontFamily: "karantina, sans-serif",
                       }}
                     >
                       {item.position}
