@@ -75,6 +75,12 @@ const TeamsHome: React.FC = () => {
             position: "Events & PR",
             name: "Vihaan Choubey",
         },
+        {
+            src: "/teams/Shubham.png",
+            position: "Events & PR",
+            name: "Shubham",
+        },
+
 
         // Design Team
         {
