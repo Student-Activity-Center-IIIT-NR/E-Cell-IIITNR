@@ -4,6 +4,7 @@ import Team from './Pages/Team/Team.jsx';
 import Events from "./Pages/Events/Events.tsx"
 import { Route, Routes } from 'react-router-dom';
 import ESummit2026 from './Pages/E-Summit/src/App.jsx';
+import DiwaliPopup from './Components/DiwaliPopup.jsx';
 
 const App = () => {
 
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/team" element={<Team/>}/>
         <Route path="/esummit" element={<ESummit2026 />} />
       </Routes>
+      <DiwaliPopup />
     </div>
   )
 }
